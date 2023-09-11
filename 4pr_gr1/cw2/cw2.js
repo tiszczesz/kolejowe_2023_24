@@ -17,8 +17,8 @@ for(let elem of todos){
     //dodac do ul liste li appendChild
     ul.appendChild(li);
 }
-todos.forEach((v)=>{
-    console.log(v);}
+todos.forEach((v,i)=>{
+    console.log(v,i);}
     );
 
 //dodac do root calosc
