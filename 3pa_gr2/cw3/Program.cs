@@ -44,3 +44,6 @@ void cw2()
     Console.WriteLine(" ============================================== ");
 }
 cw2();
+Random rnd = new Random();
+int losowa = rnd.Next(0,100);
+
