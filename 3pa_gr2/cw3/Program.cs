@@ -46,4 +46,7 @@ void cw2()
 cw2();
 Random rnd = new Random();
 int losowa = rnd.Next(0,100);
+var lista = new List<int>();
+
+lista.Add(45);
 
