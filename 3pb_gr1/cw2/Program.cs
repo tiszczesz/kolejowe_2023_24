@@ -32,12 +32,12 @@
 //Part1();
 void Part2()
 {
-
     //zgadywanka program losuje liczbe z przedzialu 0,50
     //uzytkownik zgaduje
     // podpwiadamy czy liczba ma byc wieksza czy mniejsza
     Random rnd = new Random();
     int losowa = rnd.Next(0, 50);
 }
+Part2();
 
 
