@@ -32,6 +32,7 @@ void part2(){
     //zliczamy ilosc prob
     Random rnd = new Random();
     int szukana = rnd.Next(0,50);
+    
 }
 part2();
 
