@@ -5,6 +5,10 @@ int times = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Za pomoca petli for(...){....}");
 for(int i=0; i<times;i++ ){    
     Console.WriteLine($"{text} i = {i}");
+    if(i<times-2){
+        continue;
+    }
+    Console.WriteLine("Po continue");
 }
 Console.WriteLine("Za pomoca petli while(...){....}");
 int j = 0;
