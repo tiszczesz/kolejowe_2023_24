@@ -39,5 +39,15 @@ void Part2()
     int losowa = rnd.Next(0, 50);
 }
 Part2();
+List<int> lista = new List<int>();
+lista.Add(3);
+lista.Add(2);
+lista.Add(17);
+lista.Add(5);
+Console.WriteLine(lista.Count);
+Console.WriteLine(lista[0]);
+foreach(int elem in lista){
+    Console.WriteLine(elem);
+}
 
 
