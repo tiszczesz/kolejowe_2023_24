@@ -2,7 +2,6 @@
     Console.WriteLine("Witamy w swiecie dotnet");
     //Console.ReadKey();
     Console.Write("Podaj a: ");
-
     int a = Convert.ToInt32(Console.ReadLine());
     Console.Write("Podaj b: ");
     int b = Convert.ToInt32(Console.ReadLine());
