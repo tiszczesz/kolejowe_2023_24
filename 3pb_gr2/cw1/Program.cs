@@ -1,5 +1,4 @@
-﻿try
-{
+﻿try{
     Console.Write("Podaj a: ");
     int a = Convert.ToInt32(Console.ReadLine());
     Console.Write("Podaj b: ");
@@ -8,17 +7,14 @@
     Console.WriteLine($"{a} + {b} = {(a + b)}");
     Console.WriteLine($"{a} - {b} = {(a - b)}");
     Console.WriteLine($"{a} * {b} = {(a * b)}");
-    if (b == 0)
-    {
+    if (b == 0)    {
         Console.WriteLine($"{a} / {b} = BRAK WYNIKU!!!");
     }
-    else
-    {
+    else    {
         Console.WriteLine($"{a} / {b} = {((double)a / b)}");
     }
 }
-catch (FormatException ex)
-{
+catch (FormatException ex){
     Console.WriteLine(ex.Message);
 }
 
