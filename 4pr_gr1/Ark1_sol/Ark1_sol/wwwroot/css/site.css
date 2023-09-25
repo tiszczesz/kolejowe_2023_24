@@ -1,0 +1,61 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#baner {
+    background: #18FFA4;
+    height: 50px;
+}
+
+#lewy {
+    background: #AEFFCF;
+    height: 550px;
+    width: 30%;
+    float: left;
+}
+
+#srodkowy {
+    background: #DDFFCD;
+    height: 550px;
+    width: 40%;
+    float: left;
+}
+
+#prawy {
+    background: #AEFFCF;
+    height: 550px;
+    width: 30%;
+    float: left;
+}
+
+#stopka {
+    background: #18FFA4;
+    height: 50px;
+    text-align: center;
+    clear: both;
+}
+
+ul {
+    margin-left: 100px;
+}
+
+img {
+    margin: 100px;
+}
+
+form {
+    margin-left: 150px;
+}
+
+h4 {
+    margin-left: 100px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h2, p {
+    margin: 0;
+}

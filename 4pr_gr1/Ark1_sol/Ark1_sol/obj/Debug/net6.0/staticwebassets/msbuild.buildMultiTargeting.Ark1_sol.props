@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ark1_sol.props" />
+</Project>

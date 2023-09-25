@@ -22,6 +22,9 @@ void ShowArray(int[] contener)
         Console.WriteLine(item);
     }
 }
+int getMax(int[] data){
+    return 0;
+}
 FillArray(losowe);
 ShowArray(losowe);
 int max = getMax(losowe);
