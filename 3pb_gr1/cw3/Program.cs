@@ -29,7 +29,7 @@ int min(int[] tab)
      if (tab.Length <= 0) throw new FormatException(message: "Pusta tablica");
          int min = tab[0];
      foreach(var elem in tab){
-        if(elem>min) min = elem;
+        if(elem<min) min = elem;
      }
      return min;
 }
