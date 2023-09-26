@@ -14,19 +14,46 @@
 }
 void Ex2()
 {
-    int[] losowe = new int[10];
-    //funkcja ktora wypelni losowymi  0..100 wartosciami ta tablice
+    Console.Write("Podaj rozmiar tablicy: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[] losowe = new int[size];
+    //funkcja ktora wypelni losowymi  -100..100 wartosciami ta tablice
 
     FillArray(losowe);
     ShowArray(losowe);
-    int max = getMax(losowe);
-    void FillArray(int[] contener)
-    {
+    Console.WriteLine($"Max w tablicy: {max(losowe)}");
+    Console.WriteLine($"Min w tablicy: {min(losowe)}");
+    Console.WriteLine($"Min w tablicy: {losowe.Min()}");
+    Console.WriteLine($"Max w tablicy: {losowe.Max()}");
+    Console.WriteLine($"Sum w tablicy: {losowe.Sum()}");
+    Console.WriteLine($"Average w tablicy: {losowe.Average()}");
 
+    int max(int[] t){
+        if(t.Length==0) throw new FormatException(message:"Tablica pusta");
+        int m = t[0];
+        foreach(var elem in t){
+            if(elem>m) m=elem;
+        }  
+        return m;      
     }
-    void ShowArray(int[] contener)
+   int min(int[] t){
+        if(t.Length==0) throw new FormatException(message:"Tablica pusta");
+        int m = t[0];
+        foreach(var elem in t){
+            if(elem<m) m=elem;
+        }
+         return m;  
+    }
+    void FillArray(int[] container)
     {
-        foreach (var item in contener)
+        Random rnd = new Random();
+        for(int i=0;i<container.Length;i++){
+            container[i]= rnd.Next(-100,101);
+        }
+    }
+    void ShowArray(int[] container)
+    {
+        foreach (var item in container)
         {
             Console.Write(item+" ");
         }
