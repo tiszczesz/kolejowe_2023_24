@@ -28,8 +28,9 @@ void Ex2()
     {
         foreach (var item in contener)
         {
-            Console.WriteLine(item);
+            Console.Write(item+" ");
         }
+         Console.WriteLine();
     }
     int getMax(int[] data)
     {
