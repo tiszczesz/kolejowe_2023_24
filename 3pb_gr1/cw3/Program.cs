@@ -17,12 +17,21 @@ Console.WriteLine($"Min elementow: {min(tab)}");
 int max(int[] tab)
 {
      if (tab.Length <= 0) throw new FormatException(message: "Pusta tablica");
-     
+     int max = tab[0];
+     foreach(var elem in tab){
+        if(elem>max) max = elem;
+     }
+     return max;
 }
 
 int min(int[] tab)
 {
      if (tab.Length <= 0) throw new FormatException(message: "Pusta tablica");
+         int min = tab[0];
+     foreach(var elem in tab){
+        if(elem>min) min = elem;
+     }
+     return min;
 }
 
 int sum(int[] tab){
