@@ -27,6 +27,7 @@ document.querySelector("#run")?.addEventListener("click", (event) => {
         (document.querySelector("#timer")as HTMLSpanElement).style.color = "red";
         console.log((event.target as HTMLInputElement).value);
     } else {
+        (document.querySelector("#timer") as HTMLDivElement).innerHTML = getTime();
         startID = setInterval(() => {
             (document.querySelector("#timer") as HTMLDivElement).innerHTML = getTime();
         }, 1000);
