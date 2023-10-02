@@ -24,6 +24,7 @@ void Ex2(){
 
     //uzytkownik dodaje kolejne kolory i czarny konczy w liscie tylko kolory malymi literami
     AddToColors(colors,"zielony");
+   // colors.RemoveAt(colors.Count);
     //wyswietlenie listy kolorow
     Show(colors);
 }
