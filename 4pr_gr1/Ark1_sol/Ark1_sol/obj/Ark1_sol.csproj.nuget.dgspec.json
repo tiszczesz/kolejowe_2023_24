@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj": {}
+    "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj": {
+    "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
+        "projectUniqueName": "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
         "projectName": "Ark1_sol",
-        "projectPath": "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
+        "projectPath": "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
         "packagesPath": "C:\\Users\\pszcz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\obj\\",
+        "outputPath": "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

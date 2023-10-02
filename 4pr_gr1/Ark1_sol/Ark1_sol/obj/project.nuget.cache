@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9mT5+hg57rqL8aRnc+RGhQxoCR0ScutHKSEyByTRY38B6BEZrNLRa1dJp/WsSqWaR5cm+n/fWLgqEw5WVMODjg==",
+  "dgSpecHash": "ajXVn6ZwpBoa4xixp51PcT9Zhyq11rV2IG9/k72c/HF4QdWK9KeuM98/1wpUE/fYrLeMOJLTUzReBIAogLhzXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
+  "projectFilePath": "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pszcz\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
@@ -201,8 +201,8 @@
     "C:\\Users\\pszcz\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\zstdsharp.port\\0.7.1\\zstdsharp.port.0.7.1.nupkg.sha512",
-    "C:\\Users\\pszcz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.19\\microsoft.windowsdesktop.app.ref.6.0.19.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.19\\microsoft.netcore.app.ref.6.0.19.nupkg.sha512",
+    "C:\\Users\\pszcz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.19\\microsoft.windowsdesktop.app.ref.6.0.19.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.19\\microsoft.aspnetcore.app.ref.6.0.19.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.19\\microsoft.netcore.app.host.win-x64.6.0.19.nupkg.sha512"
   ],
