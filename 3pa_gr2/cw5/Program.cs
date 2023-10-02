@@ -23,19 +23,19 @@ void Ex2(){
     List<string> colors = new();
 
     //uzytkownik dodaje kolejne kolory i czarny konczy w liscie tylko kolory malymi literami
-    AddToColors(colors);
+    AddToColors(colors,"zielony");
     //wyswietlenie listy kolorow
     Show(colors);
 }
-void AddToColors(List<string> data){
+void AddToColors(List<string> data, string finisher = "czarny"){
     string? color = "";
     do{
-        Console.Write("podaj kolor (czarny to koniec): ");
+        Console.Write($"podaj kolor ({finisher} to koniec): ");
         color = Console.ReadLine()?.Trim().ToLower();
         if(color!=null && color.Length!=0){
             data.Add(color);
         }        
-    }while(color!=null && color.Length!=0 && color!="czarny");
+    }while(color!=null && color.Length!=0 && color!=finisher);
 }
 //Ex1();
 Ex2(); 
