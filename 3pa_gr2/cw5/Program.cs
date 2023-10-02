@@ -20,8 +20,22 @@ void Show<T>(List<T> data){
 }
 void Ex2(){
     //lista kolorow najpierw pusta
+    List<string> colors = new();
+
     //uzytkownik dodaje kolejne kolory i czarny konczy w liscie tylko kolory malymi literami
+    AddToColors(colors);
     //wyswietlenie listy kolorow
+    Show(colors);
+}
+void AddToColors(List<string> data){
+    string? color = "";
+    do{
+        Console.Write("podaj kolor (czarny to koniec): ");
+        color = Console.ReadLine()?.Trim().ToLower();
+        if(color!=null && color.Length!=0){
+            data.Add(color);
+        }        
+    }while(color!=null && color.Length!=0 && color!="czarny");
 }
 //Ex1();
 Ex2(); 
