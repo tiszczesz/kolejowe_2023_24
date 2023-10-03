@@ -19,6 +19,14 @@ void Ex2(){
     //utworzy liste liczb losowych wstawianych kolejno 
     //0 konczy wstawianie i nalezy do listy
     //wyswietli liczby
+    int aa = 23545;
+    string aaString = aa.ToString();
+
+    // int sum = aaString.Sum(e=>(Char.GetNumericValue(e)));
+    // foreach(var e in aaString){
+    //     Console.WriteLine((int)(e));
+    // }
+   // Console.WriteLine(sum);
 }
 
 void ShowList<T>(List<T> list){
@@ -27,4 +35,5 @@ void ShowList<T>(List<T> list){
     }
     Console.WriteLine();
 }
-Ex1();
+//Ex1();
+Ex2();
