@@ -33,6 +33,12 @@ void Ex2()
    //gdy uzytkownik napisze koniec to wstawianie sie przerywa 
    //i wyswietlaja sie wszystkie kolory ShowList(colors)
 
+   //Lista dwuelementowych tablic   kolor polski kolor angielski
+   List<string[]> lista = new List<string[]>
+   {
+       new string[] { "czarny", "black" }
+   };
+   //Console.WriteLine(lista[0]);
 }
 void ShowList<T>(List<T> data)
 {
@@ -42,4 +48,5 @@ void ShowList<T>(List<T> data)
     }
     Console.WriteLine();
 }
-Ex1();
+//Ex1();
+Ex2();
