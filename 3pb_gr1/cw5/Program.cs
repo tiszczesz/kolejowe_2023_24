@@ -27,8 +27,8 @@
 void Ex2()
 {
    //utworzenie pustej listy colors kolorow string
-   //napisanie funkcji insertColor ktora wstawia do listy colors nazwy kolorow wypisane przez
-   //uzytkownika 
+   //napisanie funkcji insertColor ktora wstawia do listy colors nazwy kolorow wypisane
+   // przez uzytkownika 
    //void InsertColor(List<string> data,string finisher="koniec"){ ....}
    //gdy uzytkownik napisze koniec to wstawianie sie przerywa 
    //i wyswietlaja sie wszystkie kolory ShowList(colors)
