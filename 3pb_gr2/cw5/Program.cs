@@ -22,11 +22,11 @@ void Ex2(){
     int aa = 23545;
     string aaString = aa.ToString();
 
-    // int sum = aaString.Sum(e=>(Char.GetNumericValue(e)));
+     var sum = aaString.Sum(e=>Char.GetNumericValue(e));
     // foreach(var e in aaString){
     //     Console.WriteLine((int)(e));
     // }
-   // Console.WriteLine(sum);
+    Console.WriteLine(sum);
 }
 
 void ShowList<T>(List<T> list){
