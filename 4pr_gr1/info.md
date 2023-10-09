@@ -6,5 +6,7 @@ cd katalog
 npm init -y  // generowanie package.json
 npm i bootstrap
 npm i typescript --save-dev
-tsc -init //generowanie tsconfig.json
+npx tsc -init //generowanie tsconfig.json
+
+npx tsc ewentualna_nazwa_pliku.ts
 ```
