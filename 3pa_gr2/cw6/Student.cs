@@ -41,3 +41,7 @@ public class Student
         return $"imie: {Firstname} nazwisko: {Lastname} wiek: {Age}";
     }
 }
+
+// struct RR{
+
+// }
