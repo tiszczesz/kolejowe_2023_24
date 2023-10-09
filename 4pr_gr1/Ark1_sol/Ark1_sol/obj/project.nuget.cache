@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ajXVn6ZwpBoa4xixp51PcT9Zhyq11rV2IG9/k72c/HF4QdWK9KeuM98/1wpUE/fYrLeMOJLTUzReBIAogLhzXw==",
+  "dgSpecHash": "9mT5+hg57rqL8aRnc+RGhQxoCR0ScutHKSEyByTRY38B6BEZrNLRa1dJp/WsSqWaR5cm+n/fWLgqEw5WVMODjg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
+  "projectFilePath": "C:\\Users\\pszcz\\Documents\\GitHub\\kolejowe_2023_24\\4pr_gr1\\Ark1_sol\\Ark1_sol\\Ark1_sol.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pszcz\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\pszcz\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
