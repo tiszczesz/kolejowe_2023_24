@@ -9,3 +9,10 @@ g2.Price = -45.67m;
 // Console.WriteLine(e1.GetHashCode());
 // Console.WriteLine(e2.GetHashCode());
  Console.WriteLine(g2.ToString());
+ //Film(List<string> lann)
+ //napisac klase Film z polami prywatnymi title director
+ // price length languages tablica
+ // uzyc property np do ceny
+ // przeciazyc konstruktory
+ // nadpisac ToString()
+ // public decimal Price { get; set;}
