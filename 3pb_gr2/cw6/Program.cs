@@ -8,3 +8,8 @@ Console.WriteLine(p1.GetHashCode());
 Console.WriteLine(p1.ToString());
 Console.WriteLine(p2.ToString());
 
+//Napisac klase Circle pola srodek (x,y) oraz promien(musi byc dodatni)
+//property dwa konstruktory i nadpisav metode ToString
+// obwod i pole kola
+//napisac metde sprawdzajaca ile wspolnych punktow maja okregi
+
