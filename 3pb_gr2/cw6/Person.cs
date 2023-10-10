@@ -4,6 +4,7 @@ public class Person
 {
     //pola
     private string? firstname;
+    public string? PESEL { get; set; } //auto property
     public string? Firstname
     {
         get { return firstname?.ToUpper(); }
@@ -32,6 +33,6 @@ public class Person
     }
     public override string ToString()
     {
-        return $"Imie: {firstname} Nazwisko: {lastname} data urodzenia: {birthDay.ToShortDateString()}";
+        return $"Imie: {Firstname} Nazwisko: {Lastname} data urodzenia: {birthDay.ToShortDateString()}";
     }
 }
