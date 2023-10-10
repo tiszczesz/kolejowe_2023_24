@@ -11,3 +11,5 @@ Console.WriteLine(p1.GetHashCode());  //metoda GetHashCode()
 Console.WriteLine(p1.GetType());  //metoda GetType()
 
 //napisac klase Car z polami marka cena rokProdukcji przebieg
+// dwa konstruktory
+// nadpisac metode ToString()
