@@ -2,6 +2,8 @@
 
 Person p1 = new Person(); //utworzenie obiektu typu Person
 Person p2 = new Person("Leon","Frecki",new DateTime(2005,12,9));
+p1.Firstname = "Sebastian";
+p1.Lastname = "Hajduk";
 Console.WriteLine(p1);  //metoda ToString()
 Console.WriteLine(p2);  //metoda ToString()
 

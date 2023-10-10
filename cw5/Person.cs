@@ -4,7 +4,15 @@ public class Person{
 
     //pola klasy
     private string? firstname;
+    public string? Firstname{
+        get{ return firstname?.ToUpper();}
+        set {firstname = value;}
+    }
     private string? lastname;
+    public string? Lastname{
+        get{ return lastname?.ToUpper();}
+        set {lastname = value;}
+    }
     private DateTime birthDay;
     
     //metody klasy
@@ -24,6 +32,6 @@ public class Person{
     //nadpisywanie metody ToString z klasy bazowej Object
     public override string ToString()
     {
-        return $"Imie: {firstname} nazwisko: {lastname} data urodzenia: {birthDay.ToShortDateString()}";
+        return $"Imie: {Firstname} nazwisko: {Lastname} data urodzenia: {birthDay.ToShortDateString()}";
     }
 }
