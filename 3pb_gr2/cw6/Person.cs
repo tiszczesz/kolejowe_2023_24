@@ -10,6 +10,12 @@ public class Person
         get { return firstname?.ToUpper(); }
         set { firstname = value; }
     }
+    private double mass;
+    public double Mass
+    {
+        get { return mass; }
+        set { mass = value < 0 ? -value : value; }
+    }
     private string? lastname;
     public string? Lastname
     {
