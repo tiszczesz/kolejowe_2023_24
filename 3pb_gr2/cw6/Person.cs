@@ -23,6 +23,6 @@ public class Person
     }
     public override string ToString()
     {
-        return $"Imie: {firstname} Nazwisko: {lastname} data urodzenia: {birthDay}";
+        return $"Imie: {firstname} Nazwisko: {lastname} data urodzenia: {birthDay.ToShortDateString()}";
     }
 }
