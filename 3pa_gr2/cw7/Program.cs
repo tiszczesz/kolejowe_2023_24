@@ -6,6 +6,15 @@ void Ex2(){
     // suma tych liczb po 
     // 3 6 9|18|ilosc liczb pierwszych
 }
+void Ex3(){
+    //aplikacja za menu
+    //dodaj nowa gre
+    //pokaz wszystkie gry
+    //zakoncz program
+    //z operacji na pliku
+    //linia pliku: tytul;cena;gatunek;cool:bool 
+
+}
 void Ex1()
 {
     string[] words = new string[]{
@@ -19,6 +28,6 @@ void Ex1()
     var dane = File.ReadAllLines("dane.txt");
     foreach (string line in dane)
     {
-        Console.WriteLine(line);
+        Console.WriteLine(line); 
     }
 }
