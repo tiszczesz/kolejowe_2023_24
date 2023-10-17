@@ -13,6 +13,7 @@ void Ex2()
    // 2 4 2|8
    // 2|2
    //ilosc liczb w linii jest losowa (np do wylosowania ZERO)
+   //na koncu odczyt z pliku i wyswietlenie na ekranie
 }
 static void Ex1()
 {
