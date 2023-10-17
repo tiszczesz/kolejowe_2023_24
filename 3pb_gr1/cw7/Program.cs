@@ -15,6 +15,14 @@ void Ex2(){
     //wtedy jest zapis do pliku z listy
     //ewentulnie wyswietlenie odczytanego pliku
 }
+void Zadanie(){
+    //napisac aplikacje z menu
+    // film: tytul, rezyser, czas trwania, rok wydania
+    //1 - dodaj film  ->tworzenie nowego obiektu film 
+    //      i zapisanie do pliku
+    //2 - odczyt wszystkich filmow z pliku i wyswietlenie
+    //3 -  zakoncz programu
+}
 void Ex1()
 {
     List<string> texts = new List<string>{
