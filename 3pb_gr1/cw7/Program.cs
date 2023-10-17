@@ -22,6 +22,8 @@ void Zadanie(){
     //      i zapisanie do pliku
     //2 - odczyt wszystkich filmow z pliku i wyswietlenie
     //3 -  zakoncz programu
+    // w pliku kazda linia to nowy film
+    // tytyl;rezyser;czas trwania;rok wydania
 }
 void Ex1()
 {
