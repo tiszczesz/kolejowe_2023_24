@@ -4,13 +4,13 @@ Ex2();
 
 void Ex2()
 {
-   //napisac aplikacje generujaca liczby losowe --> List<int>
+   // napisac aplikacje generujaca liczby losowe --> List<int>
    // ilosc linii jest ustalona przez uzytkownika
    // kazda linia zapisywana do List lub Array
    // potem zapis do pliku wszystkich linii 
    // kazda linia na koncu po znaku | ma sume liczb
    // np
-   // 2 4 2|8
+   // 2 4 2|8|2 ewentualnie ilosc liczb pierwszych
    // 2|2
    //ilosc liczb w linii jest losowa (np do wylosowania ZERO)
    //na koncu odczyt z pliku i wyswietlenie na ekranie
