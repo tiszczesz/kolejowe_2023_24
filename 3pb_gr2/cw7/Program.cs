@@ -8,14 +8,25 @@ void Ex2()
    // ilosc linii jest ustalona przez uzytkownika
    // kazda linia zapisywana do List lub Array
    // potem zapis do pliku wszystkich linii 
-   // kazda linia na koncu po znaku | ma sume liczb
+   // kazda linia na koncu po znaku | ma sume liczb 
    // np
    // 2 4 2|8|2 ewentualnie ilosc liczb pierwszych
    // 2|2
    //ilosc liczb w linii jest losowa (np do wylosowania ZERO)
    //na koncu odczyt z pliku i wyswietlenie na ekranie
 }
-static void Ex1()
+ 
+ void zadanie(){
+    // aplikacja kursy programowania
+    // menu
+    // 1 utworz kurs  : temat termin cena iloscMiejsc i dopisanie do pliku
+    // 2 zobacz kursy : z pliku wyswietli kursy
+    // 3 zamknij aplikacje
+    // w pliku nazwa; termin;cena;ilosc
+    // w pliku nazwa; termin;cena;ilosc
+ }
+ 
+ void Ex1()
 {
     var data = new List<string>{
     "linia pierwsza",
