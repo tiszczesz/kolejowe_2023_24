@@ -8,6 +8,7 @@ void Ex2(){
 }
 void Ex3(){
     //aplikacja za menu
+    // C R U D
     //dodaj nowa gre
     //pokaz wszystkie gry
     //zakoncz program
