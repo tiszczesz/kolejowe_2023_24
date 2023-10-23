@@ -2,7 +2,7 @@
         Napisac aplikacje konsolowa operujaca na zbiorze gier
         Game tittle, genre, price, timeInGame, year
         w pliku title;genre;price;.... (CSV)
-        funkcjonalnosc jak nizej
+        funkcjonalnosc jak nizej C R (U) D
         Uzyc klasy Game !!!! tworzyc obiekty
         seralizowac do string
         po pobraniu z pliku deserializacja do obiektu typu Game
