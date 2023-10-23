@@ -15,7 +15,7 @@ void Menu()
         Console.WriteLine("");
         Console.WriteLine("\tk - Koniec programu");
         Console.Write("\n\t\tWybierz opcje: --> ");
-        string? input = Console.ReadLine().Trim();
+        string? input = Console.ReadLine()?.Trim();
         wybor = (input!=null && input.Length>0 ) ? input.ToLower()[0]:' ';
         switch(wybor){
             case '1': InsertNote();break;
