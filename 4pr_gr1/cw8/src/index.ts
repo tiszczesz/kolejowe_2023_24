@@ -3,8 +3,8 @@ let todos: Todo[];
 let users: User[];
 todos = await getTodos();
 users = await getUsers();
-console.log(todos);
-console.log(users);
+//console.log(todos);
+//console.log(users);
 const rootNode = document.querySelector("#root") as HTMLDivElement;
 const usersNode = document.querySelector("#users") as HTMLDivElement;
 UsersToList(usersNode, users);
@@ -15,12 +15,15 @@ function UsersToList(node: HTMLDivElement | null, users: User[]): void {
         const li = document.createElement("li");
         li.id = u.id.toString();
         li.className = "list-group-item";
-        li.innerHTML = `${u.name} <span style="color:blue;font-weight:bold">${u.username}</span><br /> email: ${u.email}`;
+        li.innerHTML = `${u.name} ${u.username}<br /> email: ${u.email}`;
         li.addEventListener("click", (event) => {
             const elem = event.target as HTMLDataListElement;
+            console.log(elem.id,u.id);
+            
             const todosFilter = todos.filter((e) => {
                 return (e.userId.toString() === elem.id);
             })
+
             console.log(todosFilter);
 
             // rootNode.innerHTML = `zadania do wykonania dla: ${elem.id}`;
