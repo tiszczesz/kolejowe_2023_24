@@ -1,7 +1,11 @@
-﻿const string FILENAME = "notes.txt";
+﻿using cw8;
 
-Menu();
-
+const string FILENAME = "notes.txt";
+var testowa = Testowa.Deserialize("2;Hhhhh;12:3:2012");
+Console.WriteLine(testowa);
+//Menu();
+var tt = new Testowa();
+Console.WriteLine(tt.Serialize());
 void Menu()
 {
     char wybor = ' ';
