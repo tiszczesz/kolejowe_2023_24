@@ -1,0 +1,4 @@
+{"Id":1,"Title":"Wiedzmin","Price":66.90,"Edition":"2008-12-09T00:00:00"}
+{"Id":2,"Title":"Rymok","Price":66.90,"Edition":"2012-12-09T00:00:00"}
+{"Id":3,"Title":"Cyberpunk 2077","Price":166.90,"Edition":"2019-12-09T00:00:00"}
+{"Id":4,"Title":"FIFA 2019","Price":67.90,"Edition":"2017-03-19T00:00:00"}
