@@ -1,7 +1,14 @@
-﻿const string FILENAME = "dane.txt";
+﻿using cw8;
 
-Menu();
+const string FILENAME = "dane.txt";
 
+//Menu();
+
+Fake f1 = new Fake{Id=1,Name="ala",Price=23.78m};
+Console.WriteLine(f1.SerializeToCSV());
+string data = "3;Domek;3,14";
+Fake? f2 = Fake.DeserializeFromCSV(data);
+Console.WriteLine(f2);
 void Menu()
 {
     char option = ' ';
