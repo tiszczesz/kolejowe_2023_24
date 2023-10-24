@@ -17,11 +17,13 @@ void Ex2()
 }
  
  void zadanie(){
-    // aplikacja kursy programowania
+    // aplikacja kursy programowania C R U D 
     // menu
     // 1 utworz kurs  : temat termin cena iloscMiejsc i dopisanie do pliku
     // 2 zobacz kursy : z pliku wyswietli kursy
-    // 3 zamknij aplikacje
+    // 3 usun wybrany kurs
+    // 4 wyczysc wszystkie kursy
+    // k zamknij aplikacje
     // w pliku nazwa; termin;cena;ilosc
     // w pliku nazwa; termin;cena;ilosc
  }
