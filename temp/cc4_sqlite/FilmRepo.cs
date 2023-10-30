@@ -5,10 +5,10 @@ namespace cc4_sqlite;
 
 public class FilmRepo
 {
-    private string connString = "Data Source=dane.db";
+    private string connString;
     public FilmRepo()
     {
-        
+        connString = "Data Source="+System.IO.Path.Join(AppContext.BaseDirectory,"dane.db");
     }
     public List<Film> GetFilms(){
         List<Film> films = new List<Film>();
