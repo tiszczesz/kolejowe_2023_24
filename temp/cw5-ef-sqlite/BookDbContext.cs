@@ -5,14 +5,16 @@ namespace cw5_ef_sqlite;
 public class BookDbContext:DbContext
 {
     private string connString = "Data Source=books.db";
+     public string DbPath { get; }
     public BookDbContext()
     {
-        
+        DbPath = System.IO.Path.Join(AppContext.BaseDirectory,"MyBooks.db");
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlite(connString);
+        
+        optionsBuilder.UseSqlite("Data Source="+DbPath);
     }
     public DbSet<Book> Books { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
