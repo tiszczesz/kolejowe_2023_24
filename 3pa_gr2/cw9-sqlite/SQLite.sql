@@ -15,6 +15,4 @@ VALUES("post 2","Lepiej pisać dla własnego dobra"
 INSERT INTO Posts(title,content,date)
 VALUES("post 3","Jest głośno ale mam sposoby na wyciszenia"
     ,"2023-11-06");    
-SELECT 
-strftime('%Y', date)
- FROM Posts;
+SELECT strftime('%Y', date) FROM Posts;
