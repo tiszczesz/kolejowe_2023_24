@@ -7,3 +7,6 @@ Console.WriteLine($"Ilosc gier: {games.Count}");
 Game game = GameInterface.CreateGame();
 Console.WriteLine(game);
 repo.InsertGame(game);
+Console.Write("Podaj tytul gry: ");
+var title = Console.ReadLine()?.Trim().ToLower();
+var answer = repo.GetGamesByTitle(title);

@@ -48,6 +48,14 @@ public class GamesRepo
             command.CommandText = "INSERT INTO Games(Title,Genre,Year,Price) "+
             $"VALUES(\"{g.Title}\",\"{g.Genre}\",{g.Year},{price})";
             Console.WriteLine(command.CommandText);
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
         }
+    }
+    public List<Game> GetGamesByTitle(string? title){
+        List<Game> queryGames = new List<Game>();
+        //todo
+        return queryGames;
     }
 }
