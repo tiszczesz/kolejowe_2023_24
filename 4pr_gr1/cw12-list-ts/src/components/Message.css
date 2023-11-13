@@ -1,0 +1,10 @@
+.info{
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    border: solid 1px brown;
+    font-weight: bold;
+    background-color: bisque;
+    width: 300px;
+    color: brown;
+}
