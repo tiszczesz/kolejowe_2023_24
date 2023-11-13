@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using System.Globalization;
+using Microsoft.Data.Sqlite;
 
 namespace cw8;
 
@@ -41,6 +42,12 @@ public class GamesRepo
         return games;
     }
     public void InsertGame(Game g){
-        //zapis do bazy
+        using(SqliteConnection connection = new SqliteConnection(connString)){
+            SqliteCommand command = connection.CreateCommand();
+            string? price = g.Price?.ToString(CultureInfo.InvariantCulture);
+            command.CommandText = "INSERT INTO Games(Title,Genre,Year,Price) "+
+            $"VALUES(\"{g.Title}\",\"{g.Genre}\",{g.Year},{price})";
+            Console.WriteLine(command.CommandText);
+        }
     }
 }
