@@ -22,7 +22,7 @@ public class PostsRepo
                 posts.Add(new Post{
                     Id = rd.GetInt32(0),
                     Title = rd.GetString(1),
-                    Conent = rd.GetString(2),
+                    Content = rd.GetString(2),
                     CreateDate = rd.GetDateTime(3)
                 });
             }
