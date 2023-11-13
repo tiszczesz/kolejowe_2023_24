@@ -26,9 +26,22 @@ public class PostsRepo
                     CreateDate = rd.GetDateTime(3)
                 });
             }
-        }
-        
+        }        
         conn.Close(); 
         return posts;
+    }
+
+    public void InsertPost(Post p)
+    {
+        using(SqliteConnection connection = new SqliteConnection(connString)){
+            SqliteCommand command = connection.CreateCommand();
+            string sqliteData = $"{p.CreateDate?.Year}-{p.CreateDate?.Month}-{p.CreateDate?.Day}";
+            command.CommandText = "INSERT INTO Posts(title,content,date) "+
+            $"VALUES(\"{p.Title}\",\"{p.Content}\",\"{sqliteData}\")";
+            //Console.WriteLine(command.CommandText);
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }
