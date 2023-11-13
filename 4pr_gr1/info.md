@@ -13,11 +13,11 @@ npx tsc ewentualna_nazwa_pliku.ts
 ### instalacja react
 ```console
 //jesli jest potrzeba
-
+npm i create-react-app
 //ewentualnie
 npm -g uninstall create-react-app
 
-npm i create-react-app
+
 
 npx create-react-app nazwa-aplikacji
 
