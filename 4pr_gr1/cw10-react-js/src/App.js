@@ -6,9 +6,9 @@ function App() {
   console.log("Renderowanie App");
   return (
     <>
-        <h1>Hello from React</h1>
-        <MyComponent1 mycolor="red" />
-        <Message firstname="fff" lastname="Lolo" />
+        <h1>Hello from React 13.11.2023</h1>
+        <MyComponent1 mycolor="green" />
+        <Message firstname="Adam" lastname="Nowak" />
     </>
  
   );
