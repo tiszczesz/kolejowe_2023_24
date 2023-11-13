@@ -23,4 +23,15 @@ public class GameInterface
         };
 
     }
+    public static void ShowAll(List<Game> games){
+        foreach(var g in games){
+            ShowGame(g);
+        }
+    }
+    public static void ShowGame(Game g){
+        Console.WriteLine("Tytul: "+g.Title);
+        Console.WriteLine("Rodzaj: "+g.Genre);
+        Console.WriteLine("Rok produkcji: "+g.Year);
+        Console.WriteLine("Cena: "+g.Price+ " PLN");
+    }
 }

@@ -54,8 +54,30 @@ public class GamesRepo
         }
     }
     public List<Game> GetGamesByTitle(string? title){
-        List<Game> queryGames = new List<Game>();
-        //todo
-        return queryGames;
+       List<Game> games = new List<Game>();
+        SqliteConnection connection = new SqliteConnection(connString);
+        SqliteCommand command = connection.CreateCommand();
+        command.CommandText = "SELECT Id,Title,Genre,Year,Price FROM Games WHERE ";
+        connection.Open();
+
+        SqliteDataReader rd = command.ExecuteReader();
+        if (rd.HasRows)
+        {
+            while (rd.Read())
+            {
+                games.Add(
+                    new Game
+                    {
+                        Id = rd.GetInt32(0),
+                        Title = rd.GetString(1),
+                        Genre = rd.GetString(2),
+                        Year = rd.GetInt32(3),
+                        Price = rd.GetDecimal(4)
+                    }
+                );
+            }
+        }
+        connection.Close();
+        return games;
     }
 }
