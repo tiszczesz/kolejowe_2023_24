@@ -4,4 +4,6 @@ PostsRepo repo = new PostsRepo();
 
 var posts = repo.GetPosts();
 
-Console.WriteLine(posts.Count);
+ConsoleInter.ShowAllPosts(posts);
+var p = ConsoleInter.GetPost();
+repo.InsertPost(p);

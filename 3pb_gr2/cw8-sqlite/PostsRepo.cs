@@ -33,4 +33,16 @@ public class PostsRepo
         conn.Close();
         return posts;
     }
+    public void InsertPost(Post p){
+        using (SqliteConnection conn = new SqliteConnection(connString))
+        {
+            SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "INSERT INTO Posts(Title,Content,PostDate) VALUES"+
+            $"(\"{p.Title}\",\"{p.Content}\",\""+p.PostDate.ToString("yyyy-MM-dd")+"\")";
+            //Console.WriteLine(command.CommandText);
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+    }
 }
