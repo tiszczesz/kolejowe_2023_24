@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Globalization;
 using Microsoft.Data.Sqlite;
 
 namespace cw9;
@@ -36,5 +37,19 @@ public class StudentsRepo
 
         conn.Close();
         return students;
+    }
+    public void InsertStudent(Student s){
+        using (SqliteConnection conn = new SqliteConnection(connString))
+        {
+            SqliteCommand command = conn.CreateCommand();
+            string date = $"{s.BirthDay.Year}-{s.BirthDay.Month}-{s.BirthDay.Day}";
+            command.CommandText = "INSERT INTO Students(firstname,lastname,birthDay,avgRange) "+
+            $" VALUES(\"{s.Firstname}\",\"{s.Lastname}\",\"{date}\","
+               +$"{s.AvgRange.ToString(CultureInfo.InvariantCulture)})";
+           // Console.WriteLine(command.CommandText);
+           conn.Open();
+           command.ExecuteNonQuery();
+           conn.Close();
+        }
     }
 }
