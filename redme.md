@@ -6,3 +6,7 @@ dotnet run
 
 ```
 
+
+### pobieranie z github 
+https://download-directory.github.io/
+

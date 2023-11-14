@@ -49,7 +49,7 @@ public class StudentsRepo
            // Console.WriteLine(command.CommandText);
            conn.Open();
            command.ExecuteNonQuery();
-           conn.Close();
+           conn.Close(); 
         }
     }
 }
