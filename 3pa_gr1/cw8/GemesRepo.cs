@@ -83,7 +83,22 @@ public class GamesRepo
 
     public void DeleteGame(Game g)
     {
-        //todo
-        return;
+        using(SqliteConnection connection = new SqliteConnection(connString)){
+            SqliteCommand command = connection.CreateCommand();
+             //todo
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+    }
+     public void UpdateGame(Game g)
+    {
+        using(SqliteConnection connection = new SqliteConnection(connString)){
+            SqliteCommand command = connection.CreateCommand();
+             //todo
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
     }
 }
