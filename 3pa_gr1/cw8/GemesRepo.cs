@@ -80,4 +80,10 @@ public class GamesRepo
         connection.Close();
         return games;
     }
+
+    public void DeleteGame(Game g)
+    {
+        //todo
+        return;
+    }
 }

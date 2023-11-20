@@ -34,4 +34,10 @@ public class GameInterface
         Console.WriteLine("Rok produkcji: "+g.Year);
         Console.WriteLine("Cena: "+g.Price+ " PLN");
     }
+    public static Game? GetGameByTitle(List<Game> games){
+        Console.Write("Podaj tytul gry: ");
+        string? title = Console.ReadLine()?.Trim();
+        return games.Find((g)=>{return g.Title!.ToLower()
+           .Contains(title?.ToLower() ?? "null");});
+    }
 }
