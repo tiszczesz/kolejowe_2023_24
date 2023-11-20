@@ -33,15 +33,14 @@ public class PostsRepo
 
     public void InsertPost(Post p)
     {
-        using(SqliteConnection connection = new SqliteConnection(connString)){
-            SqliteCommand command = connection.CreateCommand();
-            string sqliteData = $"{p.CreateDate?.Year}-{p.CreateDate?.Month}-{p.CreateDate?.Day}";
-            command.CommandText = "INSERT INTO Posts(title,content,date) "+
-            $"VALUES(\"{p.Title}\",\"{p.Content}\",\"{sqliteData}\")";
-            //Console.WriteLine(command.CommandText);
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
-        }
+        using SqliteConnection connection = new SqliteConnection(connString);
+        SqliteCommand command = connection.CreateCommand();
+        string sqliteData = $"{p.CreateDate?.Year}-{p.CreateDate?.Month}-{p.CreateDate?.Day}";
+        command.CommandText = "INSERT INTO Posts(title,content,date) " +
+        $"VALUES(\"{p.Title}\",\"{p.Content}\",\"{sqliteData}\")";
+        //Console.WriteLine(command.CommandText);
+        connection.Open();
+        command.ExecuteNonQuery();
+        connection.Close();
     }
 }
