@@ -32,7 +32,7 @@ public class ConsoleInter
         };
     }
     public static List<Post>? SearchPostsByTitle(List<Post> posts){
-        Console.Write("Podaj tytul posta: ");
+        Console.Write("\n\tPodaj tytul posta do wyszukania: ");
         string? title = Console.ReadLine()?.Trim()?.ToLower();
         if(title==null) return null;
         return posts.Where(p=>p.Title!.ToLower().Contains(title)).ToList();
