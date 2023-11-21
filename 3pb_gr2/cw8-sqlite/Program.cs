@@ -5,7 +5,7 @@ PostsRepo repo = new PostsRepo();
 var posts = repo.GetPosts();
 
 ConsoleInter.ShowAllPosts(posts);
-var p = ConsoleInter.GetPost();
+var p = ConsoleInter.CreatePost();
 repo.InsertPost(p);
 //dodac usuwanie posta po podaniu przez uzytkownika tytulu posta
 // i potwierdzeniu ze wlasnie ten post chce usunac ---> 3

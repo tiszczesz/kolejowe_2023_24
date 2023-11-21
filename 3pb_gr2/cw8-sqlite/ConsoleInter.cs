@@ -18,7 +18,7 @@ public class ConsoleInter
         Console.WriteLine($" Data utworzenia: {p.PostDate.ToShortDateString()}  ");
 
     }
-    public static Post GetPost(){
+    public static Post CreatePost(){
         Console.WriteLine(" === Podaj informacje o poscie");
         Console.Write(" Tytul postu: ");
         string? title = Console.ReadLine()?.Trim();
@@ -30,5 +30,11 @@ public class ConsoleInter
             Content = content,
             PostDate = DateTime.Now
         };
+    }
+    public static List<Post>? SearchPostsByTitle(List<Post> posts){
+        Console.Write("Podaj tytul posta: ");
+        string? title = Console.ReadLine()?.Trim()?.ToLower();
+        if(title==null) return null;
+        return posts.Where(p=>p.Title!.ToLower().Contains(title)).ToList();
     }
 }
