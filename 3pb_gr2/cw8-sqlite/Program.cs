@@ -11,4 +11,4 @@ repo.InsertPost(p);
 // i potwierdzeniu ze wlasnie ten post chce usunac ---> 3
 // dodac update wybranego posta po tytule
 // uzytkownik decyduje co ma updatowac   ----> 4
-// pelna aplikacja z menu jak we wczesniejszym projekcie  -----> 6
+// pelna aplikacja z menu jak we wczesniejszym projekcie  -----> 5
