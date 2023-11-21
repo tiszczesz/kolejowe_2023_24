@@ -35,6 +35,7 @@ public class ConsoleInter
         Console.Write("\n\tPodaj tytul posta do wyszukania: ");
         string? title = Console.ReadLine()?.Trim()?.ToLower();
         if(title==null) return null;
+        Console.WriteLine(title);
         return posts.Where(p=>p.Title!.ToLower().Contains(title)).ToList();
     }
 }
