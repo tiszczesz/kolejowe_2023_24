@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json;
 using WebApplication2.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,10 @@ app.MapRazorPages();
      }
      return sb.ToString();
  });
-// app.MapGet("/api", () => "API");
+ app.MapGet("/api/films", () => {
+     IRepoFilms repo = new FakeRepoFilms();
+     var films = repo.GetFilms();
+     return JsonSerializer.Serialize(films);
+ });
 
 app.Run();
