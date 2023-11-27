@@ -1,0 +1,7 @@
+body{
+    background-color: bisque;
+}
+p{
+    border: solid 1px green;
+    padding: 20px;
+}
