@@ -11,4 +11,5 @@ app.MapGet("/hello", () =>
         $"Witaj {name} dzisiaj mamy: {DateTime.Now.ToShortDateString()}");
 app.MapGet("/hello2",()=>$"Imię Nazwisko klasa aktualny rok: {DateTime.Now.Year} ");
 app.MapGet("/students",()=>StudentRepo.GetStudents());
+app.MapGet("/primes",()=>Primes.GetPrimes(30));
 app.Run();
