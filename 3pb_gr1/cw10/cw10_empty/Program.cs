@@ -1,7 +1,12 @@
 using cw10_empty;
 
 var builder = WebApplication.CreateBuilder(args);
+//1 czesc 
+
+
 var app = builder.Build();
+//2 czesc
+app.UseStaticFiles();
 
 string firstname = "Tomasz";
 int age = 34;
