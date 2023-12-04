@@ -4,28 +4,30 @@ type Props = {
   data: string[];
   name: string;
   info: string;
+  handleChange: (val:string)=>void;
 };
 
-const Radios = ({ data, info, name }: Props) => {
+const Radios = ({ data, info, name,handleChange }: Props) => {
   const [selected, setSelected] = useState("");
+  console.log("Renderowanie Radios ....");
   return (
-    <>
-      <hr />
-      <h3>{info}</h3>
-      {data.map((v, i) => (
-        <>
-          <input
-            key={i}
+    <>      
+      <h4>{info}</h4>
+      {data.map((value, index) => (
+        <div key={"g-"+index}>
+          <input 
+            key={index} 
             type="radio"
             name={name}
-            value={v}
+            value={value}
             onChange={(e) => {
               setSelected(e.target.value);
+              handleChange(value)
             }}
           />
-          <label>{v}</label>
-          <br />
-        </>
+          <label key={"label-"+index}>{value}</label>
+          <br key={"br-"+index} />
+        </div>
       ))}
       <div>Wybrany element: {selected}</div>
     </>
