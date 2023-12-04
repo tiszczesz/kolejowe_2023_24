@@ -7,6 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/index.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,6 +15,29 @@
     <div>
         To jest strona dynamiczna czas serwera:
         <p>@DateTime.Now.ToLongTimeString()</p> 
+        @{            
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            for(int i=1;i<=6;i++){
+                sb.Append($"<h{i}>Nagłówek poziomu {i} </h{i}>\n");
+            }
+            string html = sb.ToString();
+        }
+        @Html.Raw(html)
+        
+    </div>
+    <hr>
+    <div class="container">
+        <div>
+             <h3>Lista studentów</h3>
+        <ol>
+            @foreach(var s in Model.MyStudents){
+                <li>@s.Firstname @s.Lastname</li>
+            }
+        </ol>
+        </div>
+        <div>
+
+        </div>
     </div>
 </body>
 </html>

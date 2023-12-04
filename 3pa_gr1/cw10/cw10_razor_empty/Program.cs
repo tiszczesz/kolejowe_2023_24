@@ -4,7 +4,7 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 //uzywanie funkcjonbalnosci
-
-  
+app.UseStaticFiles();
+app.MapRazorPages();  
 
 app.Run();
