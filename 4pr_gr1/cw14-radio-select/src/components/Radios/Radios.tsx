@@ -27,7 +27,6 @@ const Radios = ({ data, info, name }: Props) => {
           <br />
         </>
       ))}
-
       <div>Wybrany element: {selected}</div>
     </>
   );
