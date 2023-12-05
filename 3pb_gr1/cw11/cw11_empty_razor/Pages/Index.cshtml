@@ -4,12 +4,38 @@
 }
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Strona Razor Page - Index</h1>
+    <div class="container">
+        <h1>Strona Razor Page - Index 
+            dzisiaj jest: @DateTime.Now.ToShortDateString()</h1>
+
+        <div>
+            <a class="btn btn-secondary" href="./Other">Link do drugiej strony</a>
+        </div>
+        <h4>Lista</h4>
+        <ol class="list-group">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <li class="list-group-item">element listy: @i</li>
+            }
+        </ol>
+        <h4>Kolory</h4>
+        <select>
+            @foreach (var color in Model.Colors)
+            {
+                <option value="@color">@color</option>
+            }
+        </select>
+    </div>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
 {
     "dotnet.defaultSolution": "cw11_empty_razor.sln",
-    "editor.inlineSuggest.showToolbar": "always"
+    "editor.inlineSuggest.showToolbar": "onHover"
 }
