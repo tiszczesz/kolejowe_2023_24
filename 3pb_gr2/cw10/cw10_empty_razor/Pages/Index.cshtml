@@ -1,0 +1,43 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+    
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strona Index</h1>
+    <div>
+        <a href="/Index2">Do strony Index2</a>
+    </div>
+    <h4>Lista</h4>
+    <ul>
+        @for(int i=1;i<10;i++){
+            <li>element listy: @i</li>
+        }
+    </ul>
+    <h4>do{...}while(...)</h4>
+    @{
+        int losowa = 0;
+        int suma = 0;
+        var rnd = new Random();
+        do{
+            losowa = rnd.Next(20);
+            suma+=losowa;
+            <span>@losowa </span>
+        }while(suma<100);
+        <div>Suma = @suma</div>
+    }
+    <h4>Lista zadań do wykonania</h4>
+    <ol>
+        @foreach(var item in Model.Todos){
+            <li>@item</li>
+        }
+    </ol>
+</body>
+</html>

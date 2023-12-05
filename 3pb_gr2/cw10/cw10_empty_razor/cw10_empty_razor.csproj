@@ -6,4 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup> 
+
+  <ItemGroup>
+    <None Include="Pages\Index2.cshtml" />
+    <None Include="Pages\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  
+
 </Project>
