@@ -6,12 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\_ViewImports.cshtml" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
-  </ItemGroup>
 
 </Project>
