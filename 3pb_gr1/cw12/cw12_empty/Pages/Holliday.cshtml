@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/index.css">
     <title>Document</title>
 </head>
 
@@ -40,6 +41,31 @@
             wznosi w górę swe rączęta,
             błogosławi lud. x2
         </pre>
+
+       <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lp</th>
+                    <th>Nazwa</th>
+                    <th>Cena</th>
+                    <th>Właściciel</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                @{int lp = 0;}
+                @foreach(var g in @Model.Gifts){
+                    lp++;
+                    <tr>
+                        <td class="right">@lp</td>
+                        <td>@g.Name</td>
+                        <td class="right">@g.Price zł</td>
+                        <td>@g.Owner</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+       </div> 
 </body>
 
 </html>
