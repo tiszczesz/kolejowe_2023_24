@@ -7,9 +7,13 @@ namespace MyApp.Namespace
     {
         [BindProperty]
         public List<string> Colors { get; set; }
-        public void OnGet()
+        public IndexModel()
         {
             Colors = new List<string>{"red","green","blue","yellow"};
+        }
+        public void OnGet()
+        {
+            
         }
     }
 }

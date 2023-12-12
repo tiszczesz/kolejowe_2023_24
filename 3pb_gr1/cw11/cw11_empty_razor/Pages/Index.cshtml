@@ -29,13 +29,14 @@
             }
         </ol>
         <h4>Kolory</h4>
-        <select>
+        <select id="colors">
             @foreach (var color in Model.Colors)
             {
                 <option value="@color">@color</option>
             }
         </select>
     </div>
+    <script src="~/js/index.js" defer></script>
 </body>
 
 </html>
