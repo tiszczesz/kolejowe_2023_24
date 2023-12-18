@@ -31,6 +31,7 @@ code .
 npm i bootstrap
 //dodac sciezke do bootstrapa np. App.tsx  
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 
 ```
 
 
