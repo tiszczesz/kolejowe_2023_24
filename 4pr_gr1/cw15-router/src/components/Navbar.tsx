@@ -17,6 +17,9 @@ const Navbar = (props: Props) => {
             <li className='list-group-item nav-item bg-light'>
                 <Link className='nav-link' to='/page2'>Strona druga</Link>
             </li>
+            <li className='list-group-item nav-item bg-light'>
+                <Link className='nav-link' to='/holiday'>Strona świąteczna</Link>
+            </li>
         </ul>
     </div>
   )
