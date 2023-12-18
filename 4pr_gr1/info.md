@@ -38,3 +38,7 @@ import 'import 'bootstrap/dist/css/bootstrap.min.css';
 
 npm i react-router-dom
 ```
+
+### biblioteka react-router
+
+https://reactrouter.com/en/main/start/tutorial
