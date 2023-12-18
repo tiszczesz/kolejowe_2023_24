@@ -32,3 +32,9 @@ npm i bootstrap
 //dodac sciezke do bootstrapa np. App.tsx  
 import 'import 'bootstrap/dist/css/bootstrap.min.css';
 ```
+
+
+```console
+
+npm i react-router-dom
+```
