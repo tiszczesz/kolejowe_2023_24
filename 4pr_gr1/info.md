@@ -30,7 +30,7 @@ cd nazwa-aplikacji
 code .
 npm i bootstrap
 //dodac sciezke do bootstrapa np. App.tsx  
-import 'import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
 
