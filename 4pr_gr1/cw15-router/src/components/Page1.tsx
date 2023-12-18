@@ -4,7 +4,13 @@ type Props = {}
 
 const Page1 = (props: Props) => {
   return (
-    <div>Page1</div>
+    <>
+     <h3>Page1</h3>
+     <div>
+       Wybierz kolor strony <input type="color"  />
+     </div>
+    </>
+   
   )
 }
 

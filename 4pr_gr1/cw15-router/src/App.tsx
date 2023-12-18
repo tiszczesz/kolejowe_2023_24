@@ -9,12 +9,12 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <div className="d-flex">
+    <div className="d-flex container">
       <div style={{width:"300px"}} className='m-2'>
         <Navbar  />
       </div>
       
-      <div className='m-2'>
+      <div className='m-2 mt-5'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/page1' element={<Page1/>}/>
