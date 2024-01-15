@@ -1,0 +1,8 @@
+﻿@page
+@model MyApp.Namespace.ResultModel
+@{
+}
+<h2>Result</h2>
+@if(Request.Method=="POST"){
+    <p>To jest z formularza: @ViewData["result"]</p>
+}
