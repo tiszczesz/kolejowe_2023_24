@@ -17,10 +17,12 @@ namespace MyApp.Namespace
         {
             try
             {
-                var result =Math.Round( Math.Sqrt(Convert.ToInt32(Request.Form["liczba"])),2);
+                var result = Math.Round(Math.Sqrt(Convert.ToInt32(Request.Form["liczba"])), 2);
                 ViewData["liczba"] = Request.Form["liczba"];
                 ViewData["result"] = result;
-            }catch(FormatException ex){
+            }
+            catch (FormatException ex)
+            {
                 ViewData["result"] = "BŁEDNE DANE!!!";
             }
             //var elem = Request.Form;
