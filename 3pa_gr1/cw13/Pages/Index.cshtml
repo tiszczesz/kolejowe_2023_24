@@ -1,0 +1,36 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello from Index</h1>
+        <p>Tutaj informacja z modelu: @ViewData["info"]</p>
+        <p>Tutaj informacja z A: @Model.A</p>
+        <div style="border: solid 1px black; padding: 20px;">
+            <form method="post" >
+                <input type="text" name="firstname" id="firstname" placeholder="Podaj imię">
+                <input type="number" name="liczba" id="liczba" placeholder="Podaj liczbę">
+                <input type="submit" value="Zapisz" name="Save">
+            </form>
+        </div>
+        @if(Request.Method=="POST"){
+             <div class="result">Twoje imię: 
+            @Request.Form["firstname"] <br />
+            Pierwistek: (@ViewData["liczba"]) = @ViewData["result"]
+        </div>
+        }
+       
+    </div>
+
+</body>
+
+</html>
