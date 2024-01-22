@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <form method="post">
+        <div class="row m-3">
+            <label class="col-3 text-end">Podaj a:</label>
+            <input type="number" name="a" class="col-3">
+        </div>
+        <div class="row m-3">
+            <label class="col-3 text-end">Podaj b:</label>
+            <input type="number" name="b" class="col-3">
+        </div>
+        <div class="row m-3">
+            <select name="choice" class="col-3 offset-3">
+                <option value="iter">Iteracyjnie</option>
+                <option value="rek">Rekurencyjnie</option>
+            </select>
+        </div>
+        <div class="row m-3">
+
+            <input type="submit" name="submit" class="offset-3 col-3" value="OBLICZ NWD">
+        </div>
+    </form>
+</div>
+@if (Request.Method == "POST")
+{
+    <div>NWD = @Model.Result</div>
+    <div>@if(ViewData["error"] != null)
+        {
+            @ViewData["error"]
+        }
+           
+</div>
+}
