@@ -1,0 +1,30 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index</h1>
+    <div>@Model.Info</div>
+    <div>@ViewData["info2"]</div>
+    <form method="post" >
+        <input type="text" name="firstname" id="firstname" placeholder="Podaj imię"><br />
+        <input type="text" name="lastname" id="lastname" placeholder="Podaj nazwisko"><br />
+        <input type="submit" name="submit" id="submit" value="Zapisz"><br />
+    </form>
+    
+        @if(Request.Method=="POST"){
+          <div>  @Model.Result dzisiaj mamy: @DateTime.Now.ToShortDateString()</div> 
+          }
+</body>
+       
+        
+    
+</html>
