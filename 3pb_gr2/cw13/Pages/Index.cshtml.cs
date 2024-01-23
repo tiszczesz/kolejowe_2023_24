@@ -6,10 +6,10 @@ namespace MyApp.Namespace
     public class IndexModel : PageModel
     {
         [BindProperty]
-        public string Info { get; set; }
+        public string? Info { get; set; }
 
         [BindProperty]
-        public string Result { get; set; }
+        public string? Result { get; set; }
         public void OnGet()
         {
             ViewData["info2"] = "Ala już kota nie ma";
