@@ -13,5 +13,18 @@
 </head>
 <body>
     <h1>Index</h1>
+    <form method="post" asp-page="Result">
+        <input type="text" name="firstname" id="firstname" 
+        placeholder="Podaj imię"><br />
+        <input type="text" name="lastname" id="lastname" 
+        placeholder="Podaj nazwisko"><br />
+        <input type="submit" value="Zapisz">
+    </form>
+    <div>
+        @if(Request.Method=="POST" && Request.Form.ContainsKey("firstname")){
+            <p>Witaj @Request.Form["firstname"] @Request.Form["lastname"]
+                 dzsiaj mamy: @DateTime.Now.ToShortDateString()</p>
+        }
+    </div>
 </body>
 </html>

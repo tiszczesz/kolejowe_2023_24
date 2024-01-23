@@ -6,22 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Pages\_ViewImports.cshtml" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Pages\Shared\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\_ViewImports.cshtml" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\_ViewImports.cshtml" />
-  </ItemGroup>
+
+
 
   <ItemGroup>
     <None Include="Pages\_ViewImports.cshtml" />
