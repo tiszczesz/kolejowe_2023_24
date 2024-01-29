@@ -1,0 +1,18 @@
+﻿@page
+@model MyApp.Namespace.NewPageModel
+@{
+}
+<h3>Formularz zgłoszeniowy</h3>
+
+<form method="post">
+    <input  asp-for="@Model.Firstname" placeholder="podaj imie"/><br />
+    <input  asp-for="@Model.Lastname" placeholder="podaj nazwisko" /><br />
+    <input  asp-for="@Model.Age" placeholder="podaj wiek" /><br />
+    <input type="submit" value="Zapisz">
+</form>
+<hr />
+@if(Request.Method=="POST"){
+    <div>
+        @Model.Firstname @Model.Lastname wiek: @Model.Age
+    </div>
+}
