@@ -1,3 +1,4 @@
+using cw15.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -19,7 +20,16 @@ namespace MyApp.Namespace
         }
          public void OnPost()
         {
-            var result = ModelState;
+            if(ModelState.IsValid){
+                if(Choice=="rek"){
+                    ViewData["result"] = $"Rekurencyjnie: NWD({A},{B}) = {NWD.NWDRec(A,B)}";
+                }else{
+                     ViewData["result"] = $"Iteracyjnie: NWD({A},{B}) = {NWD.NWDIter(A,B)}";
+                }
+            }else{
+                ViewData["result"]="Błędne lub brak danych";
+            }
+            
         }
     }
 }

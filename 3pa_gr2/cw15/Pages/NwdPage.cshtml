@@ -22,3 +22,7 @@
             <input type="submit" name="submit" class="offset-3 col-3" value="OBLICZ NWD">
         </div>
     </form>
+    <hr>
+    @if(Request.Method=="POST"){
+        <div>@ViewData["result"]</div>
+    }
