@@ -1,0 +1,18 @@
+﻿@page
+@model MyApp.Namespace.MyPageModel
+@{
+}
+<h3>Moja strona</h3>
+<form method="post">
+    <input type="number" asp-for="@Model.A" placeholder="podaj a">
+    <input type="number" asp-for="@Model.B" placeholder="podaj b">
+    <input type="submit" value="oblicz">
+</form>
+<hr>
+
+
+  
+        <div>
+            Wynik obliczeń: @ViewData["result"]
+        </div>
+ 
