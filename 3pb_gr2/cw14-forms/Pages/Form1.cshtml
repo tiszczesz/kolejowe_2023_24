@@ -9,3 +9,7 @@
     <input placeholder="podaj date" asp-for="@Model.DateRel"><br />
     <input type="submit" value="Zapisz">
 </form>
+<hr>
+@if(Request.Method=="POST"){
+    <div class="result">@ViewData["result"]</div>
+}
