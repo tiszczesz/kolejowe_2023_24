@@ -1,0 +1,11 @@
+﻿@page
+@model MyApp.Namespace.Form1Model
+@{
+}
+
+<form method="post">
+    <input placeholder="podaj tytuł" asp-for="@Model.Title"><br />
+    <input placeholder="podaj autora" asp-for="@Model.Author"><br />
+    <input placeholder="podaj date" asp-for="@Model.DateRel"><br />
+    <input type="submit" value="Zapisz">
+</form>
