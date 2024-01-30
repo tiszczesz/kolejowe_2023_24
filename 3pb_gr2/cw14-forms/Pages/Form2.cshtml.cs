@@ -8,5 +8,11 @@ namespace MyApp.Namespace
         public void OnGet()
         {
         }
+         public void OnPost()
+        {
+            // switch(){
+
+            // }
+        }
     }
 }
