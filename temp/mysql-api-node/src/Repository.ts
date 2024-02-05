@@ -13,7 +13,7 @@ export const GetAll = async () => {
 
   console.log(results); // results contains rows returned by server
   console.log(fields); // fields contains extra meta data about results, if available
-  connection.close();
+  connection.end();
   return results;
 }
 export const InsertProduct = async (product: Product) => {
