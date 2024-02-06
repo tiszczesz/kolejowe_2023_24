@@ -12,12 +12,14 @@ namespace cw15_forms.Pages
         {
 
         }
-        public void OnPost()
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                //zapis do pliku
+                FileRepo.SaveToFile(MyTodo);
+                return RedirectToPage("Index");
             }
+            return Page();
         }
     }
 }
