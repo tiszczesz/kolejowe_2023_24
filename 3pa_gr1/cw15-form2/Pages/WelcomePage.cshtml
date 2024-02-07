@@ -1,0 +1,24 @@
+﻿@page
+@model cw15_form2.Pages.WelcomePageModel
+@{
+}
+<h1>Zapis na imprezę</h1>
+<form method="post">
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.MyWelcome.Name"></label>
+        <input asp-for="@Model.MyWelcome.Name" class="col-6"/>
+        <span asp-validation-for="@Model.MyWelcome.Name" class="col-3 error"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.MyWelcome.Content"></label>
+        <textarea asp-for="@Model.MyWelcome.Content" class="col-6"></textarea>
+    </div>
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.MyWelcome.DateGo"></label>
+        <input asp-for="@Model.MyWelcome.DateGo" class="col-6">
+        <span asp-validation-for="@Model.MyWelcome.DateGo" class="col-3 error"></span>
+    </div>
+    <div class="row m-2">
+        <input type="submit" value="Zapisz" class="btn btn-primary col-6 offset-3"/>
+    </div>
+</form>

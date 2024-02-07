@@ -1,0 +1,26 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Strona Index</h1>
+    <p>Z modelu: @Model.Info</p>
+    <p>Z ViewData: @ViewData["info"]</p>
+    <div>
+        <form method="POST">
+            <input type="text" name="firstname" placeholder="Podaj imie">
+            <input type="submit" value="Zapisz" name="save">
+        </form>
+    </div>
+    <div>
+        @if(Request.Method=="POST"){
+            <p> Firstname = @Request.Form["firstname"]</p>
+        }
+    </div>
+</body>
+</html>

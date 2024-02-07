@@ -1,0 +1,46 @@
+﻿@page
+@model MyApp.Namespace.Pages2Model
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Strona Wigilina</h1>
+        <div>
+            Tu będzie tabelka z gośćmi
+        </div>
+        <div>
+            <a asp-page="Index">Powrót na stronę główną</a>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Prezent</th>
+                </tr>
+                @foreach (var elem in Model.Persons)
+                {
+                    <tr>
+                        <td>@elem.Firstname</td>
+                        <td>@elem.Lastname</td>
+                        <td>@elem.Gift</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+</html>
