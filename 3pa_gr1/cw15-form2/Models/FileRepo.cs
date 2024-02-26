@@ -1,7 +1,9 @@
-﻿namespace cw15_form2.Models
+﻿
+namespace cw15_form2.Models
 {
 	public class FileRepo
 	{
+
 		public static void AddToFile(Welcome welcome, string path = "dane.txt")
 		{
 			if (welcome != null)
@@ -19,5 +21,10 @@
 			return welcomes;
 		}
 
-	}
+        public void SaveAll(List<Welcome> welcomes,string path="dane.txt")
+        {
+			//todo zamienic na string
+            //File.WriteAllLines(path,welcomes)
+        }
+    }
 }

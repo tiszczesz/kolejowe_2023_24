@@ -5,4 +5,34 @@
 }
 
 <h2>Lista wszystkich uczestników</h2>
-
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Nazwa uczestnika</th>
+            <th>Co przyniesie</th>
+            <th>Data zgłoszenia</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int lp = 0;
+        }
+        @foreach (var w in Model.Welcomes)
+        {
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@w.Name</td>
+                <td>@w.Content</td>
+                <td>@w.DateGo?.ToShortDateString()</td>
+                <td>
+                    <a asp-page="Delete" class="btn btn-danger" asp-route-name="@w.Name">
+                        Usuwanie
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

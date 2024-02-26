@@ -19,7 +19,7 @@ namespace cw15_form2.Pages
 
 		public void OnGet()
 		{
-			Welcomes = _repo.GetAll();
+			Welcomes = _repo.GetAll().OrderBy(w=>w.DateGo).ToList();
 		}
 	}
 }
