@@ -11,6 +11,23 @@
 <body>
     <div class="container">
         <h1>Strona Index</h1>
+        <h3>Zbiór zadań do wykonania</h3>
+        <table>
+            <tr>
+                <th>
+                    Treść
+                </th>
+                <th>
+                    Data wykonania
+                </th>
+            </tr>
+            @foreach(var t in Model.Todos){
+                <tr>
+                    <td>@t.Content</td>
+                    <td>@t.Date?.ToShortDateString()</td>
+                </tr>
+            }
+        </table>
     </div>
     
 </body>
