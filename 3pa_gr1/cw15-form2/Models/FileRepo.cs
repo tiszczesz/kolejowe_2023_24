@@ -9,5 +9,15 @@
 				File.AppendAllText(path, welcome.ToString());
 			}
 		}
+		public List<Welcome> GetAll(string path="dane.txt"){
+			var welcomes = new List<Welcome>();
+			List<string> lines = File.ReadAllLines(path).ToList();
+			foreach(var line in lines){
+				var welcome = Welcome.GetWelocme(line);
+				if(welcome!=null) welcomes.Add(welcome);
+			}
+			return welcomes;
+		}
+
 	}
 }

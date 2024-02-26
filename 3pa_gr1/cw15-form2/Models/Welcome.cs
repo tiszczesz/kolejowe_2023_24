@@ -19,5 +19,18 @@ namespace cw15_form2.Models
         {
             return $"{Name}|{Content}|{DateGo?.ToShortDateString()}" + Environment.NewLine;
         }
+        public static Welcome? GetWelocme(string line)
+        {
+            //zamienic string z pliku na obiekt Welcome
+            var data = line.Split('|');
+            if (data.Length != 3) return null;
+            var dateOnly = data[2].Split('.');
+            DateTime date = new DateTime(
+                Convert.ToInt32(dateOnly[2]),
+                Convert.ToInt32(dateOnly[1]),
+                Convert.ToInt32(dateOnly[0])
+                );
+            return new Welcome { Name = data[0], Content = data[1], DateGo = date };
+        }
     }
 }
