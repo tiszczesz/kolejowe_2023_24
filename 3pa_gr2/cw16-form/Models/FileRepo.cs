@@ -25,5 +25,14 @@
             }
             return list;
         }
+
+        public static void SaveAll(List<Person> persons,string filename="data.txt")
+        {
+            List<string> lines = new List<string>();
+            foreach(var p in persons){
+                lines.Add(p.ToString());
+            }
+            File.WriteAllLines(filename,lines);
+        }
     }
 }
