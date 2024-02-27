@@ -1,4 +1,5 @@
-﻿namespace cw15_forms.Models
+﻿
+namespace cw15_forms.Models
 {
     public class FileRepo
     {
@@ -19,6 +20,11 @@
                 }
             }
             return todos;
+        }
+
+        internal static void SaveAll(List<Todo> todos)
+        {
+            throw new NotImplementedException();
         }
     }
 }
