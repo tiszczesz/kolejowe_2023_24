@@ -1,4 +1,5 @@
-﻿namespace cw16_form2.Models
+﻿
+namespace cw16_form2.Models
 {
     public class FileRepo
     {
@@ -17,6 +18,14 @@
                  }
             }
             return persons;           
+        }
+
+        public static void SaveAll(List<Person> persons)
+        {
+            List<string> lines = new();
+            foreach(var p in persons){
+                
+            }
         }
     }
 }
