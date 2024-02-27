@@ -23,8 +23,7 @@ namespace cw15_forms.Models
         public DateOnly? DateOf { get; set; }
         public override string ToString()
         {
-            return $"{Id};{Title};{Content};{DateOf?.ToShortDateString()}"
-                + Environment.NewLine;
+            return $"{Id};{Title};{Content};{DateOf?.ToShortDateString()}";
         }
         public static Todo? GetTodo(string line){
             var items = line.Split(';');

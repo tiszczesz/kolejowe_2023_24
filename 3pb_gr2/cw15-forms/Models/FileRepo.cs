@@ -5,7 +5,8 @@ namespace cw15_forms.Models
     {
         public static void SaveToFile(Todo todo, string path = "data.csv")
         {
-            File.AppendAllText(path, todo.ToString());
+            var trash = new string[]{todo.ToString()};
+            File.AppendAllLines(path,trash);
         }
         public static List<Todo> GetAll(string path = "data.csv")
         {
@@ -22,9 +23,13 @@ namespace cw15_forms.Models
             return todos;
         }
 
-        internal static void SaveAll(List<Todo> todos)
+        public static void SaveAll(List<Todo> todos,string path="data.csv")
         {
-            throw new NotImplementedException();
+            List<string> lines = new();
+            foreach(var t in todos){
+                lines.Add(t.ToString());
+            }
+            File.WriteAllLines(path,lines);
         }
     }
 }
