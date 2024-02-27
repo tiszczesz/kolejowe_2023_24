@@ -20,12 +20,13 @@ namespace cw16_form2.Models
             return persons;           
         }
 
-        public static void SaveAll(List<Person> persons)
+        public static void SaveAll(List<Person> persons,string fileName="data.txt")
         {
             List<string> lines = new();
             foreach(var p in persons){
-                
+                lines.Add(p.ToString());
             }
+            File.WriteAllLines(fileName,lines);
         }
     }
 }
