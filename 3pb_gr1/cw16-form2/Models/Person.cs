@@ -5,6 +5,13 @@ namespace cw16_form2.Models
 {
     public class Person
     {
+        public Person()
+        {
+            Id = Guid.NewGuid().ToString();
+        }
+
+        public string Id { get; set; }
+
         [DisplayName("Podaj kto Ty")]
         [Required(ErrorMessage = "Przedstaw się")]
         public string? Name { get; set; }
@@ -18,7 +25,19 @@ namespace cw16_form2.Models
         public DateOnly? ConfirmDate { get; set; }
         public override string ToString()
         {
-            return $"{Name};{Content};{ConfirmDate?.ToShortDateString()}" + Environment.NewLine;
+            return $"{Id};{Name};{Content};{ConfirmDate?.ToShortDateString()}" + Environment.NewLine;
+        }
+        public static Person? GetPerson(string line){
+            var elems = line.Split(';');
+            if(elems.Length==4){
+                var toDate = elems[3].Split('.');
+                DateOnly date = new DateOnly(
+                    Convert.ToInt32(toDate[2]),
+                    Convert.ToInt32(toDate[1]),
+                    Convert.ToInt32(toDate[0]));
+                return new Person{Id=elems[0],Name=elems[1],Content=elems[2],ConfirmDate = date};
+            }
+            return null;
         }
     }
 }
