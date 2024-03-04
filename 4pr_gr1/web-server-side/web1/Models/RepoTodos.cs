@@ -33,4 +33,18 @@ public class RepoTodos
         connection.Close();
         return todos;
     }
+
+    public void SaveTodo(Todo myTodo)
+    {
+        SqliteConnection connection = new SqliteConnection(_connString);
+        SqliteCommand command = connection.CreateCommand();
+        string sql = "INSERT INTO todos(content,date) VALUES(@content,@date)";
+        command.CommandText = sql;
+        command.Parameters.AddWithValue("content", myTodo.Content);
+        command.Parameters.AddWithValue("date", myTodo.Date);
+        connection.Open();
+        var result = command.ExecuteNonQuery();
+        connection.Close();
+        
+    }
 }

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/style.css">
     <title>Document</title>
 </head>
@@ -12,7 +13,8 @@
     <div class="container">
         <h1>Strona Index</h1>
         <h3>Zbiór zadań do wykonania</h3>
-        <table>
+        <div><a class="btn btn-outline-dark" asp-page="Form">Dodaj zadanie</a></div>
+        <table class="table table-striped">
             <tr>
                 <th>
                     Treść
