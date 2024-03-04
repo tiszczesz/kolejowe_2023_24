@@ -70,6 +70,13 @@ public class RepoTodos
 
     internal int DeleteTodo(int? id)
     {
-        throw new NotImplementedException();
+        if(id == null)return -1;
+        SqliteConnection connection = new SqliteConnection(_connString);
+        string sql = $"SELECT id,content,date FROM todos WHERE id={id}";
+        SqliteCommand command = connection.CreateCommand();
+        command.CommandText = sql;
+        connection.Open();
+
+        return 1;
     }
 }
