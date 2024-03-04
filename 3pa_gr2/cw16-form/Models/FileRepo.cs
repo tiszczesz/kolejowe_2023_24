@@ -1,4 +1,6 @@
-﻿namespace cw16_form.Models
+﻿using System.Text;
+
+namespace cw16_form.Models
 {
     public class FileRepo
     {
@@ -28,11 +30,11 @@
 
         public static void SaveAll(List<Person> persons,string filename="data.txt")
         {
-            List<string> lines = new List<string>();
+            StringBuilder lines = new ();           
             foreach(var p in persons){
-                lines.Add(p.ToString());
+                lines.Append(p.ToString());
             }
-            File.WriteAllLines(filename,lines);
+            File.WriteAllText(filename,lines.ToString());
         }
     }
 }
