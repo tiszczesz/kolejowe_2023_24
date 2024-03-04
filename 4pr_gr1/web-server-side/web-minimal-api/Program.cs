@@ -1,9 +1,20 @@
 using api;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options => {
+    options.AddPolicy(name: "MyPolicy",
+        builder=>{
+            builder.WithOrigins("*");
+            builder.AllowAnyMethod().AllowAnyHeader();
+        }
+    );
+});
+
 builder.Configuration.GetConnectionString("sqliteconn");
 var db = new RepoTodos(builder.Configuration);
 var app = builder.Build();
+
+app.UseCors("MyPolicy");
 
 app.MapGet("/", () =>  "Hello world");
 app.MapGet("/todos", () => Results.Ok(db.GetTodos()));

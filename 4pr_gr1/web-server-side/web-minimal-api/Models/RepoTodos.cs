@@ -72,11 +72,12 @@ public class RepoTodos
     {
         if(id == null)return -1;
         SqliteConnection connection = new SqliteConnection(_connString);
-        string sql = $"SELECT id,content,date FROM todos WHERE id={id}";
+        string sql = $"DELETE FROM todos WHERE id={id}";
         SqliteCommand command = connection.CreateCommand();
         command.CommandText = sql;
         connection.Open();
-
-        return 1;
+        var result = command.ExecuteNonQuery();
+        connection.Close();
+        return result;
     }
 }
