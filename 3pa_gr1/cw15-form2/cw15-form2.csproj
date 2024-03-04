@@ -7,12 +7,4 @@
     <RootNamespace>cw15_form2</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\ConterPage.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\ConterPage.cshtml" />
-  </ItemGroup>
-
 </Project>

@@ -9,7 +9,7 @@ namespace cw15_form2.Pages
 		private readonly ILogger<IndexModel> _logger;
 
 		[BindProperty]
-		public List<Welcome> Welcomes { get; set; }
+		public List<Welcome>? Welcomes { get; set; }
 		private FileRepo _repo;
 		public IndexModel(ILogger<IndexModel> logger)
 		{
