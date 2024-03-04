@@ -8,7 +8,7 @@ namespace cw15_form2.Models
 		{
 			if (welcome != null)
 			{
-				File.AppendAllText(path, welcome.ToString());
+				File.AppendAllText(path, welcome.ToString()+Environment.NewLine);
 			}
 		}
 		public List<Welcome> GetAll(string path="dane.txt"){
@@ -24,7 +24,11 @@ namespace cw15_form2.Models
         public void SaveAll(List<Welcome> welcomes,string path="dane.txt")
         {
 			//todo zamienic na string
-            //File.WriteAllLines(path,welcomes)
+			var lines = new List<string>();
+			foreach(var welcome in welcomes){
+				lines.Add(welcome.ToString());
+			}
+            File.WriteAllLines(path,lines);
         }
     }
 }

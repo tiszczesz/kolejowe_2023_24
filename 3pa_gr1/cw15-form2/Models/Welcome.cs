@@ -17,7 +17,7 @@ namespace cw15_form2.Models
         public DateTime? DateGo { get; set; }
         public override string ToString()
         {
-            return $"{Name}|{Content}|{DateGo?.ToShortDateString()}" + Environment.NewLine;
+            return $"{Name}|{Content}|{DateGo?.ToShortDateString()}";
         }
         public static Welcome? GetWelocme(string line)
         {
