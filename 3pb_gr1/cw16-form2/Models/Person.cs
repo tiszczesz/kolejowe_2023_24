@@ -25,7 +25,7 @@ namespace cw16_form2.Models
         public DateOnly? ConfirmDate { get; set; }
         public override string ToString()
         {
-            return $"{Id};{Name};{Content};{ConfirmDate?.ToShortDateString()}" + Environment.NewLine;
+            return $"{Id};{Name};{Content};{ConfirmDate?.ToShortDateString()}";
         }
         public static Person? GetPerson(string line){
             var elems = line.Split(';');

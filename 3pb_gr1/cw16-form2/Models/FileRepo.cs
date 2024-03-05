@@ -4,7 +4,7 @@ namespace cw16_form2.Models
     public class FileRepo
     {
         public static void AddToFile(Person person,string fileName="data.txt") {
-            File.AppendAllText(fileName,person.ToString());
+            File.AppendAllText(fileName,person.ToString()+Environment.NewLine);
         }
         public static List<Person> GetAll(string fileName = "data.txt"){
             List<Person> persons = new();
