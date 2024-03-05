@@ -28,6 +28,7 @@
                 <td>@t.DateOf?.ToShortDateString()</td>
                 <td>
                     <a class="btn btn-danger" asp-page="Delete" asp-route-id="@t.Id">Usuń</a>
+                    <a class="btn btn-outline-dark" asp-page="Update" asp-route-id="@t.Id">Zmień</a>
                 </td>
             </tr>
         }
