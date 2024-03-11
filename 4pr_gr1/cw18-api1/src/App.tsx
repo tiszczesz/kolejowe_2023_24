@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='container d-flex mt-4'>     
         <Nav /> 
-      <main className='m-3'>
+      <main className='ms-3'>
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/cw1' element={<Exercise1 />}/>
