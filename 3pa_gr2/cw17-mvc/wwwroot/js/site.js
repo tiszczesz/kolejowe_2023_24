@@ -2,3 +2,6 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+document.querySelector("select").addEventListener("change",(e)=>{
+    document.body.style.backgroundColor = e.target.value;
+});

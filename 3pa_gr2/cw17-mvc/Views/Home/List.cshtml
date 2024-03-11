@@ -1,0 +1,11 @@
+@model List<string>
+
+<h3>Lista kolorów</h3>
+
+<div>
+    <select name="" id="">
+        @foreach(var c in Model){
+            <option value="@c">@c</option>
+        }
+    </select>
+</div>

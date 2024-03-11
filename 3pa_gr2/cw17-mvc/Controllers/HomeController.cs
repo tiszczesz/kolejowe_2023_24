@@ -19,7 +19,7 @@ public class HomeController : Controller
         return View();
     }
     public IActionResult List(){
-        List<string> colors = new(){"white","green","blue","yellow"};
+        List<string> colors = new(){"white","green","blue","yellow","red","pink"};
         return View(colors);
     }
     public IActionResult Poniedzialek(){
