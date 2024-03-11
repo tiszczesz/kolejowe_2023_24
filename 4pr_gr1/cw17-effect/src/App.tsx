@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './App.css';
 import { useEffect, useRef } from 'react';
+import Changer from './components/Changer';
 
 function App() {
   console.log("Renderowanie: ");
@@ -40,6 +41,9 @@ function App() {
       <input ref={inputRef} type="text" id="firstname" />
       <div ref={divRef}></div>
       <div >{time}</div>
+      <hr />
+      <Changer time={4000} color='green'/>
+      <Changer time={1000} color='yellow'/>
     </div>
   );
 }
