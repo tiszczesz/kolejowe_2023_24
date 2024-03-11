@@ -42,8 +42,10 @@ function App() {
       <div ref={divRef}></div>
       <div >{time}</div>
       <hr />
-      <Changer time={4000} color='green'/>
-      <Changer time={1000} color='yellow'/>
+      <Changer time={4000} color='yellow'/>
+      <Changer time={2000} color='green'/>
+      <Changer time={7000} color='red'/>
+      <Changer time={1000} color='blue'/>
     </div>
   );
 }
