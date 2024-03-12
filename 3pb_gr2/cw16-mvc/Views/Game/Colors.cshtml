@@ -1,0 +1,8 @@
+@model List<string>
+
+<h3>Kolory wisny nie czynią</h3>
+<select>
+    @foreach(var c in @Model){
+        <option>@c</option>
+    }
+</select>
