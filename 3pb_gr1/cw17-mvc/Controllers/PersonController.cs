@@ -13,4 +13,12 @@ public class PersonController : Controller {
         };
         return View(person);
     }
+    public IActionResult Other(){
+        var person = new Person{
+            Firstname = "Roman",
+            Lastname = "Bułecki",
+            Age = 23
+        };
+        return View("Cool",person);
+    }
 }
