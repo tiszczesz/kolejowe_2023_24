@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace cw16_mvc.Controllers;
 
+
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -19,6 +20,13 @@ public class HomeController : Controller
         ViewBag.controller = ControllerContext.ActionDescriptor.ControllerName;
         ViewBag.action = ControllerContext.ActionDescriptor.ActionName;
         return View();
+    }
+    public IActionResult GetUsers(){
+        var users = new List<string>{"user1","user2","users"};
+        return Json(users);
+    }
+    public string Hello(){
+        return "Hello from Poland";
     }
 
     public IActionResult Privacy()
