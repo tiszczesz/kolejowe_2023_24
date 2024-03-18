@@ -1,0 +1,25 @@
+@model List<cw16_mvc.Models.User>;
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Wiek</th>
+            <th>Opis</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Firstname</td>
+                <td>@p.Lastname</td>
+                <td>@p.Age</td>
+                <td>@p.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
