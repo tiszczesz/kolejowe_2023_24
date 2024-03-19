@@ -9,4 +9,4 @@ dotnet new mvc -o mojaaplikacja
 3. dodaj akcje zwracającą film po id Json()
 4. dodaj akcje zwracającą zbiór filmów  Json()
 5. Dla ambitniejszych dane pobrane z pliku films.txt
-6. Dla jeszcze ambitniejszych dołożyć akcję zwracającą wdok wsdzystkich filmów w tabeli html
+6. Dla jeszcze ambitniejszych dołożyć akcję zwracającą widok wszystkich filmów w tabeli html
