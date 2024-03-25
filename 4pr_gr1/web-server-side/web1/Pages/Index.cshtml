@@ -1,0 +1,36 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Strona Index</h1>
+        <h3>Zbiór zadań do wykonania</h3>
+        <div><a class="btn btn-outline-dark" asp-page="Form">Dodaj zadanie</a></div>
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Treść
+                </th>
+                <th>
+                    Data wykonania
+                </th>
+            </tr>
+            @foreach(var t in Model.Todos){
+                <tr>
+                    <td>@t.Content</td>
+                    <td>@t.Date?.ToShortDateString()</td>
+                </tr>
+            }
+        </table>
+    </div>
+    
+</body>
+</html>

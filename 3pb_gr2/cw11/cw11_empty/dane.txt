@@ -1,0 +1,6 @@
+Julia|Małecka|konik na biegunach
+Maria|nowak|cistka
+Tomasz|Hajduk|Pierogi
+Grażyna|Truk|cukierki
+Roman|Tryk|Zupa
+Andrzej|Tryk|Ryba

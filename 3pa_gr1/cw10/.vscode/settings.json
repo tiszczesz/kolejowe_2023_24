@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "cw10_razor_empty.sln",
+    "editor.inlineSuggest.showToolbar": "onHover"
+}

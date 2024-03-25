@@ -1,0 +1,43 @@
+﻿@page
+@using cw16_form.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<h2>Lista uczestników</h2>
+<h4>TODO</h4>
+@if(Model.Persons!=null ){
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Pseudonim</th>
+            <th>Co przyniesie</th>
+            <th>Data potwierdzeinia</th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @{int lp = 0;}
+
+        @foreach(var p in Model.Persons){
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@p.Pseudo</td>
+                <td>@p.Content</td>
+                <td>@p.DateOf?.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-danger" asp-page="Delete" asp-route-id="@p.Id">
+                        Usuwanie
+                    </a>&nbsp;
+                      <a class="btn btn-primary" asp-page="Update" asp-route-id="@p.Id">
+                        Zmień
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

@@ -1,0 +1,8 @@
+@model List<string>
+
+<h3>Lista znajomych</h3>  
+<ol class="list-group">
+    @foreach(var name in @Model){
+        <li class="list-group-item">@name</li>
+    }
+</ol>  

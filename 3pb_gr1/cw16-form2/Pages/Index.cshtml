@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Lista uczestników</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Lp</th>
+            <th> Nazwa</th>
+            <th> Zawortość</th>
+            <th> Data potwierdzenia</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int lp = 0;
+        }
+        @foreach (var p in Model.Persons)
+        {
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@p.Name</td>
+                <td>@p.Content</td>
+                <td>@p.ConfirmDate</td>
+                <td>
+                    <a class="btn btn-danger" asp-page="Delete" asp-route-id="@p.Id">Usuń</a>
+                    <a class="btn btn-info" asp-page="Update" asp-route-id="@p.Id">Zmień</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

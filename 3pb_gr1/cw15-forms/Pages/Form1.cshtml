@@ -1,0 +1,17 @@
+﻿@page
+@model MyApp.Namespace.Form1Model
+@{
+}
+<h1>Formularz zgłoszeniowy</h1>
+<form method="post">
+    <input placeholder="Podaj imie" asp-for="@Model.Firstname" /><br />
+    <input placeholder="Podaj nazwisko" asp-for="@Model.Lastname" /><br />
+    <input placeholder="Podaj wiek" asp-for="@Model.Age" /><br />
+    <input type="submit" value="Zapisz">
+</form>
+<hr>
+@if(Request.Method=="POST"){
+    <div style="background-color:grey;padding:10px">
+        @ViewData["result"]
+    </div>
+}

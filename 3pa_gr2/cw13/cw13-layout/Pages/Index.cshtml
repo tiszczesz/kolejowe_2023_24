@@ -1,0 +1,11 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+  
+}
+<h2>Index</h2>
+<ol class="list-group">
+    @foreach(var c in Model.Carols){
+        <li class="list-group-item">@c</li>
+    }
+</ol>

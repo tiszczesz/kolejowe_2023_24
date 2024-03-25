@@ -1,0 +1,17 @@
+table{
+    margin: auto;
+    
+    border-collapse: collapse;
+}
+th, td{
+    border: solid 1px blueviolet;
+    padding: 6px;
+    min-width: 50px;
+}
+th{
+    background-color: lightslategray;
+    color: rgb(218, 210, 227);
+}
+.right{
+    text-align: right;
+}

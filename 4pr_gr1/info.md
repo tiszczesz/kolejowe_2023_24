@@ -13,7 +13,7 @@ npx tsc ewentualna_nazwa_pliku.ts
 ### instalacja react
 ```console
 //jesli jest potrzeba
-npm i create-react-app
+npm -g i create-react-app
 //ewentualnie
 npm -g uninstall create-react-app
 
@@ -30,5 +30,16 @@ cd nazwa-aplikacji
 code .
 npm i bootstrap
 //dodac sciezke do bootstrapa np. App.tsx  
-import 'import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 
 ```
+
+
+```console
+
+npm i react-router-dom
+```
+
+### biblioteka react-router
+
+https://reactrouter.com/en/main/start/tutorial

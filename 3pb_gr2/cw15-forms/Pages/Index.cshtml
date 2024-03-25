@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>Zadania do zrobienia</h2>
+
+<!--Tabelka z zadaniami z pliku-->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Lp</th>
+            <th>Zadanie</th>
+            <th>Treść</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{int lp=0;}
+        @foreach(var t in Model.Todos){
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@t.Title</td>
+                <td>@t.Content</td>
+                <td>@t.DateOf?.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-danger" asp-page="Delete" asp-route-id="@t.Id">Usuń</a>
+                    <a class="btn btn-outline-dark" asp-page="Update" asp-route-id="@t.Id">Zmień</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

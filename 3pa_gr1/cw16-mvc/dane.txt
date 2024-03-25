@@ -1,0 +1,4 @@
+Adam;Nowak;26;jakiś opis
+Monika;Nwałka;22;jakiś opis
+Roman;Nowak;45;jakiś opis
+Janusz;Nowak;67;jakiś opis
