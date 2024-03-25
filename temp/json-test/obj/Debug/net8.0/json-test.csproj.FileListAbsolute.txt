@@ -1,0 +1,15 @@
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\bin\Debug\net8.0\json-test.exe
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\bin\Debug\net8.0\json-test.deps.json
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\bin\Debug\net8.0\json-test.runtimeconfig.json
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\bin\Debug\net8.0\json-test.dll
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\bin\Debug\net8.0\json-test.pdb
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.GeneratedMSBuildEditorConfig.editorconfig
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.AssemblyInfoInputs.cache
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.AssemblyInfo.cs
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.csproj.CoreCompileInputs.cache
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.sourcelink.json
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.dll
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\refint\json-test.dll
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.pdb
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\json-test.genruntimeconfig.cache
+f:\pszczesz\docuents\GitHub\kolejowe_2023_24\temp\json-test\obj\Debug\net8.0\ref\json-test.dll
