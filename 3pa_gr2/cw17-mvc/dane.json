@@ -68,6 +68,13 @@
       "Lastname": "Garcia",
       "Average": 5,
       "Topic": "Chemistry"
-    }
+    },
+    {
+        "Id": 11,
+        "Firstname": "Teściowa",
+        "Lastname": "Frykkkk",
+        "Average": 5,
+        "Topic": "Chemistry"
+      }
   ]
   

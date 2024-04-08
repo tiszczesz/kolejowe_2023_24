@@ -1,0 +1,24 @@
+@model List<Student>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Średnia ocen</th>
+                <th>Przedmiot</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var s in Model){
+                <tr>
+                    <td>@s.Firstname</td>
+                    <td>@s.Lastname</td>
+                    <td>@s.Average</td>
+                    <td>@s.Topic</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
