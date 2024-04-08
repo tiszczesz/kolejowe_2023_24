@@ -4,16 +4,30 @@ import "./App.css";
 import { Recipe, Recipes } from "./Services/Data";
 import RecipleComp from "./components/RecipleComp";
 
+
 function App() {
   const [recipes, setRecipes] = useState<Recipe[]>(Recipes);
-
-  function handleClick(item: string): void {
-    console.log(item);
+  const [selectedRecipe, SetSelectedRecipe] = useState<Recipe|undefined>(undefined);
+  console.log(selectedRecipe);
+  
+  function handleClick(item: Recipe): void {
+    //console.log(item);
+    SetSelectedRecipe({...item});
   }
 
   return (
-    <div className="row">
-      <main className="col-11 w-75">
+    <>   
+    
+        {selectedRecipe && (
+          <div className="details">
+            Wybrano: {selectedRecipe.name}<br />
+            ilość składników: {selectedRecipe.ingredient.length}<br />
+            Szacowana cena: {selectedRecipe.price} zł<br />
+          </div>
+        )}
+      
+    <div className="container">
+      
         <h2>Świąteczne przepisy</h2>
 
         <div className='d-flex flex-wrap justify-content-around"'>
@@ -21,10 +35,11 @@ function App() {
             <RecipleComp onSelect={handleClick} key={index} recipe={item} />
           ))}
         </div>
-       
-      </main>
-      <div className="col-1 mt-5">Szczegóły</div>
+    
+     
     </div>
+    </>
+ 
   );
 }
 

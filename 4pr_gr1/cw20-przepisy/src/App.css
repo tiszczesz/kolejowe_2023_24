@@ -1,0 +1,10 @@
+.details{
+    position: fixed;
+    right: 0px;
+    top:100px;
+    background-color: lightblue;
+    border: solid green 1px;
+    width: 300px;
+    padding: 10px;
+    z-index: 1;
+}

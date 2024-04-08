@@ -3,7 +3,7 @@ import { Recipe } from '../Services/Data'
 
 type Props = {
     recipe:Recipe,
-   onSelect:(elem:string)=>void
+   onSelect:(elem:Recipe)=>void
 }
 
 const RecipleComp = (props: Props) => {
@@ -21,7 +21,7 @@ const RecipleComp = (props: Props) => {
         </ul>
         <p className='text-end'>Szacowana cena: {props.recipe.price} zł</p>
         </div>
-        <input type="button" className='btn btn-outline-info' value="Szczegóły" onClick={()=>props.onSelect(props.recipe.name)} />
+        <input type="button" className='btn btn-outline-info' value="Szczegóły" onClick={()=>props.onSelect(props.recipe)} />
     </div>
   )
 }
