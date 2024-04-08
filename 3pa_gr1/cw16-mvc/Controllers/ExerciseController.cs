@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cw16_mvc.Controllers;
 
-public class Exercise1 : Controller {
+public class ExerciseController : Controller {
 
     public IActionResult GetFromFile(){
         
