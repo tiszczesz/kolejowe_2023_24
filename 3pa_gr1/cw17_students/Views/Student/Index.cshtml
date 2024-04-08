@@ -1,0 +1,11 @@
+@using System.Globalization
+@model List<Student>
+
+    <h2>Ilość studentów @Model.Count 
+        Średni wiek: @Model.Average((e)=>e.Age)?.ToString(CultureInfo.InvariantCulture)</h2>
+    <ul>
+        @foreach(var s in Model){
+            <li>@s.Firstname @s.Lastname wiek: @s.Age</li>
+        }
+    </ul>
+
