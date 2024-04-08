@@ -13,6 +13,9 @@ public class PustkaController : Controller {
     public IActionResult AllBooks(){
         return Json(GetBooks());
     }
+    public IActionResult ToTable(){
+        return View(GetBooks());
+    }
     private List<Book> GetBooks(){
         return new List<Book>{
             new Book{

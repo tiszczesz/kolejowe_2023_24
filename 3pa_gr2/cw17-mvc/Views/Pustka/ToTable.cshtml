@@ -1,0 +1,20 @@
+@model List<Book>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> Tytuł</th>
+                <th> Ilość stron</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var b in Model){
+                <tr>
+                    <td>@b.Title</td>
+                    <td>@b.Pages</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

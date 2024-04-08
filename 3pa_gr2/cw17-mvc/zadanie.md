@@ -1,5 +1,5 @@
 ## Utworzyć kontroler Silent
-1. metodę  allStudents
+1. metodę(akcje)  allStudents
 2. zwrócić json(students)
 3. Dla ambitniejszych studenci pobierani z pliku dane.txt
 4. 
