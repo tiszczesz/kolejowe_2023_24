@@ -1,0 +1,73 @@
+[
+    {
+      "Id": 1,
+      "Firstname": "John",
+      "Lastname": "Doe",
+      "Average": 4,
+      "Topic": "History"
+    },
+    {
+      "Id": 2,
+      "Firstname": "Alice",
+      "Lastname": "Smith",
+      "Average": 5,
+      "Topic": "Mathematics"
+    },
+    {
+      "Id": 3,
+      "Firstname": "Bob",
+      "Lastname": "Johnson",
+      "Average": 3,
+      "Topic": "Science"
+    },
+    {
+      "Id": 4,
+      "Firstname": "Emily",
+      "Lastname": "Brown",
+      "Average": 4,
+      "Topic": "English"
+    },
+    {
+      "Id": 5,
+      "Firstname": "David",
+      "Lastname": "Wilson",
+      "Average": 6,
+      "Topic": "Computer Science"
+    },
+    {
+      "Id": 6,
+      "Firstname": "Sarah",
+      "Lastname": "Jones",
+      "Average": 2,
+      "Topic": "Art"
+    },
+    {
+      "Id": 7,
+      "Firstname": "Michael",
+      "Lastname": "Davis",
+      "Average": 3,
+      "Topic": "Geography"
+    },
+    {
+      "Id": 8,
+      "Firstname": "Emma",
+      "Lastname": "Martinez",
+      "Average": 5,
+      "Topic": "Physics"
+    },
+    {
+      "Id": 9,
+      "Firstname": "Sam",
+      "Lastname": "Taylor",
+      "Average": 4,
+      "Topic": "Biology"
+    },
+    {
+      "Id": 10,
+      "Firstname": "Olivia",
+      "Lastname": "Garcia",
+      "Average": 5,
+      "Topic": "Chemistry"
+    }
+  ]
+  
