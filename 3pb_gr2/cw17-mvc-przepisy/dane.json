@@ -1,0 +1,73 @@
+[
+  {
+    "Name": "Pierogi z kapustą i grzybami",
+    "Ingredient": [ "Kapusta", "Grzyby", "Cebula", "Mąka", "Jajka", "Sól", "Pieprz" ],
+    "Price": 30,
+    "Description": "Tradycyjne pierogi z kapustą i grzybami, idealne na wigilijny stół.",
+    "Img": "pierogi.jpg"
+  },
+  {
+    "Name": "Barszcz czerwony z uszkami",
+    "Ingredient": [ "Buraki", "Cebula", "Czosnek", "Marchew", "Seler", "Zioła", "Mąka", "Jajka" ],
+    "Price": 25,
+    "Description": "Klasyczny barszcz czerwony podawany z domowymi uszkami. Idealny na zimowe dni.",
+    "Img": "barszcz-wigilijny.jpg"
+  },
+  {
+    "Name": "Karp po żydowsku",
+    "Ingredient": [ "Karp", "Cebula", "Marchew", "Mąka", "Jajka", "Przyprawy" ],
+    "Price": 40,
+    "Description": "Karp marynowany i pieczony w tradycyjnym stylu żydowskim.",
+    "Img": "karp_po_zydowsku_.jpg"
+  },
+  {
+    "Name": "Kutia",
+    "Ingredient": [ "Mąka pszenna", "Mąka żytnia", "Miód", "Migdały", "Rodzynki", "Orzechy" ],
+    "Price": 24,
+    "Description": "Słodka i sycąca kutia, tradycyjne danie wigilijne.",
+    "Img": "kutia.jpg"
+  },
+  
+  {
+    "Name": "Piernik",
+    "Ingredient": [ "Mąka", "Miód", "Jajka", "Przyprawy korzenne", "Cukier" ],
+    "Price": 26,
+    "Description": "Klasyczne świąteczne ciasto, słodkie i korzenne.",
+    "Img": "piernik_najlepszy.jpg"
+  },
+  {
+    "Name": "Sałatka śledziowa",
+    "Ingredient": [ "Śledzie", "Ziemniaki", "Marchew", "Cebula", "Ogórki kiszone", "Jajka", "Majonez" ],
+    "Price": 36,
+    "Description": "Popularna sałatka na wigilijnym stole, idealna jako przystawka.",
+    "Img": "Salatka_sledziowa.jpg"
+  },
+  {
+    "Name": "Kluski śląskie z sosem grzybowym",
+    "Ingredient": [ "Ziemniaki", "Mąka ziemniaczana", "Jajka", "Grzyby", "Cebula", "Śmietana" ],
+    "Price": 30,
+    "Description": "Tradycyjne kluski podawane z gęstym sosem grzybowym.",
+    "Img": "kluski-slaskie.jpg"
+  },
+  {
+    "Name": "Barszcz ukraiński z pasztecikami",
+    "Ingredient": [ "Buraki", "Cebula", "Czosnek", "Marchew", "Seler", "Mąka", "Jajka", "Mięso", "Przyprawy" ],
+    "Price": 33,
+    "Description": "Pyszny barszcz podawany z domowymi pasztecikami, idealny na chłodne wieczory.",
+    "Img": "barszcz_ukrainski_0.jpg"
+  },
+  {
+    "Name": "Ryba po grecku",
+    "Ingredient": [ "Ryba (np. dorsz)", "Marchew", "Cebula", "Pieczarki", "Mąka", "Jajka", "Majonez" ],
+    "Price": 45,
+    "Description": "Tradycyjna ryba marynowana i pieczona z warzywami, lekka i smaczna.",
+    "Img": "ryba_po_grecku_0.jpg"
+  },
+  {
+    "Name": "Szarlotka",
+    "Ingredient": [ "Jabłka", "Mąka", "Cukier", "Masło", "Jajka", "Cynamon" ],
+    "Price": 28,
+    "Description": "Klasyczna szarlotka z kwaśnymi jabłkami i aromatycznym cynamonem.",
+    "Img": "szarlotka_79.jpg"
+  }
+]
