@@ -1,0 +1,24 @@
+﻿@model List<Car>
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Marka</th>
+                <th>Cena</th>
+                <th>Data</th>
+                <th>Przebieg (km)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var c in Model){
+                <tr>
+                    <td>@c.Brand</td>
+                    <td>@c.Price</td>
+                    <td>@c.Date</td>
+                    <td>@c.Driven</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
