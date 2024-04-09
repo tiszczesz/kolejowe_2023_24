@@ -1,0 +1,83 @@
+[
+    {
+      "Id": 1,
+      "Title": "Inception",
+      "Director": "Christopher Nolan",
+      "Language": "English",
+      "Date": "2010-07-16",
+      "Price": 12.99
+    },
+    {
+      "Id": 2,
+      "Title": "Pulp Fiction",
+      "Director": "Quentin Tarantino",
+      "Language": "English",
+      "Date": "1994-10-14",
+      "Price": 9.99
+    },
+    {
+      "Id": 3,
+      "Title": "The Shawshank Redemption",
+      "Director": "Frank Darabont",
+      "Language": "English",
+      "Date": "1994-09-23",
+      "Price": 11.49
+    },
+    {
+      "Id": 4,
+      "Title": "The Dark Knight",
+      "Director": "Christopher Nolan",
+      "Language": "English",
+      "Date": "2008-07-18",
+      "Price": 14.99
+    },
+    {
+      "Id": 5,
+      "Title": "Forrest Gump",
+      "Director": "Robert Zemeckis",
+      "Language": "English",
+      "Date": "1994-07-06",
+      "Price": 10.79
+    },
+    {
+      "Id": 6,
+      "Title": "The Matrix",
+      "Director": "Lana Wachowski, Lilly Wachowski",
+      "Language": "English",
+      "Date": "1999-03-31",
+      "Price": 8.99
+    },
+    {
+      "Id": 7,
+      "Title": "Gladiator",
+      "Director": "Ridley Scott",
+      "Language": "English",
+      "Date": "2000-05-05",
+      "Price": 9.49
+    },
+    {
+      "Id": 8,
+      "Title": "Titanic",
+      "Director": "James Cameron",
+      "Language": "English",
+      "Date": "1997-12-19",
+      "Price": 13.29
+    },
+    {
+      "Id": 9,
+      "Title": "Avatar",
+      "Director": "James Cameron",
+      "Language": "English",
+      "Date": "2009-12-18",
+      "Price": 12.99
+    },
+    {
+      "Id": 10,
+      "Title": "Jurassic Park",
+      "Director": "Steven Spielberg",
+      "Language": "English",
+      "Date": "1993-06-11",
+      "Price": 7.99
+    }
+  ]
+  

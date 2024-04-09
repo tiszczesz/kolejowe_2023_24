@@ -1,0 +1,73 @@
+[
+    {
+      "Id": 1,
+      "Title": "The Isle",
+      "Genre": "Action, Adventure, Indie, Massively Multiplayer",
+      "Date": "2015-12-01",
+      "Price": 19.99
+    },
+    {
+      "Id": 2,
+      "Title": "Cyberpunk 2077",
+      "Genre": "Action, RPG",
+      "Date": "2020-12-10",
+      "Price": 49.99
+    },
+    {
+      "Id": 3,
+      "Title": "The Witcher 3: Wild Hunt",
+      "Genre": "Action, RPG",
+      "Date": "2015-05-19",
+      "Price": 29.99
+    },
+    {
+      "Id": 4,
+      "Title": "Among Us",
+      "Genre": "Indie, Casual",
+      "Date": "2018-11-16",
+      "Price": 4.99
+    },
+    {
+      "Id": 5,
+      "Title": "Minecraft",
+      "Genre": "Sandbox, Adventure",
+      "Date": "2011-11-18",
+      "Price": 26.99
+    },
+    {
+      "Id": 6,
+      "Title": "Stardew Valley",
+      "Genre": "Simulation, RPG",
+      "Date": "2016-02-26",
+      "Price": 14.99
+    },
+    {
+      "Id": 7,
+      "Title": "Terraria",
+      "Genre": "Sandbox, Adventure",
+      "Date": "2011-05-16",
+      "Price": 9.99
+    },
+    {
+      "Id": 8,
+      "Title": "Fallout 4",
+      "Genre": "Action, RPG",
+      "Date": "2015-11-10",
+      "Price": 19.99
+    },
+    {
+      "Id": 9,
+      "Title": "Red Dead Redemption 2",
+      "Genre": "Action, Adventure",
+      "Date": "2019-11-05",
+      "Price": 59.99
+    },
+    {
+      "Id": 10,
+      "Title": "Portal 2",
+      "Genre": "Puzzle, Adventure",
+      "Date": "2011-04-18",
+      "Price": 9.99
+    }
+  ]
+  
