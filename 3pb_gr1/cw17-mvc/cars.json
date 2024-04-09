@@ -1,0 +1,62 @@
+[
+    {
+        "Brand": "Audi",
+        "Price": 50000,
+        "Date": "2021-10-15",
+        "Driven": 10000
+    },
+    {
+        "Brand": "BMW",
+        "Price": 60000,
+        "Date": "2021-09-20",
+        "Driven": 12000
+    },
+    {
+        "Brand": "Mercedes",
+        "Price": 55000,
+        "Date": "2021-11-05",
+        "Driven": 8000
+    },
+    {
+        "Brand": "Volkswagen",
+        "Price": 45000,
+        "Date": "2021-08-10",
+        "Driven": 15000
+    },
+    {
+        "Brand": "Toyota",
+        "Price": 40000,
+        "Date": "2021-12-01",
+        "Driven": 9000
+    },
+    {
+        "Brand": "Ford",
+        "Price": 35000,
+        "Date": "2021-07-25",
+        "Driven": 11000
+    },
+    {
+        "Brand": "Chevrolet",
+        "Price": 30000,
+        "Date": "2021-06-30",
+        "Driven": 13000
+    },
+    {
+        "Brand": "Hyundai",
+        "Price": 32000,
+        "Date": "2021-05-12",
+        "Driven": 10000
+    },
+    {
+        "Brand": "Kia",
+        "Price": 28000,
+        "Date": "2021-04-18",
+        "Driven": 14000
+    },
+    {
+        "Brand": "Nissan",
+        "Price": 33000,
+        "Date": "2021-03-22",
+        "Driven": 9500
+    }
+]

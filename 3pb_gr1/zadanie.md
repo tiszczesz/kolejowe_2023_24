@@ -7,5 +7,5 @@
    1. akcaj do stringa
    2. akcja z jednym obiektem
    3. akcja ze zbiorem obiektów Json()
-   4. Dla ambitnych pobiranie danych z pliku dane.txt
+   4. Dla ambitnych pobieranie danych z pliku dane.txt
    5. Jeszcze bardziej ambitni dołożyć akcje z widokiem danych w tabeli
