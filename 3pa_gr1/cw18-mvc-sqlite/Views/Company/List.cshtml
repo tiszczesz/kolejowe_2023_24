@@ -1,0 +1,25 @@
+@model List<Company>
+
+<h3>Lista kontrahentów</h3>
+<table class="table table-striped">
+    <thead>
+        <th>Lp</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Pensja</th>
+        <th></th>
+    </thead>
+    <tbody>
+        @{int lp = 0;}
+        @foreach(var item in Model){
+            lp++;
+            <tr>
+                <td>@lp</td>
+                <td>@item.Firstname</td>
+                <td>@item.Lastname</td>
+                <td class="text-end">@item.Price</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
