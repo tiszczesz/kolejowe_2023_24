@@ -7,15 +7,19 @@ namespace cw18_sqlite.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private  BookRepo _repo;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger,IConfiguration configuration)
     {
         _logger = logger;
+        _repo = new BookRepo(configuration);
+
     }
 
     public IActionResult Index()
     {
-        return View();
+        var books = _repo.GetBooks();
+        return View(books);
     }
 
     public IActionResult Privacy()
