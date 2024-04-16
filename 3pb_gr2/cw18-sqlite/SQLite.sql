@@ -9,7 +9,7 @@ CREATE TABLE Films(
 );
 
 -- Tabela "Filmy"
-INSERT INTO Filmy (Id, Title, Director, Language, Date, Price)
+INSERT INTO Films (Id, Title, Director, Language, Date, Price)
 VALUES
   (1, 'Inception', 'Christopher Nolan', 'English', '2010-07-16', 12.99),
   (2, 'Pulp Fiction', 'Quentin Tarantino', 'English', '1994-10-14', 9.99),
