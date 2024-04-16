@@ -1,2 +1,26 @@
-
+@model List<MyFilm>
 <h3>Zbiór filmów</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Reżyser</th>
+            <th>Język</th>
+            <th>Data utworzenia</th>
+            <th>Cena</th>
+            <th>Inne</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var f in Model){
+            <tr>
+                <td>@f.Title</td>
+                <td>@f.Director</td>
+                <td>@f.Language</td>
+                <td>@f.Date</td>
+                <td class="text-end">@f.Price</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
