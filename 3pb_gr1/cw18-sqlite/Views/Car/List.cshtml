@@ -23,7 +23,10 @@
                 <td>@c.Model</td>
                 <td>@c.Year</td>
                 <td class="text-end">@c.Price</td>
-                <td></td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@c.Id">Usuwanie</a>
+                    <a class="btn btn-secondary" asp-action="Update" asp-route-id="@c.Id">Zmień</a>
+                </td>
             </tr>
         }
         

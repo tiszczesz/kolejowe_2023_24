@@ -21,6 +21,8 @@ public class CarController:Controller
     public IActionResult Insert(Car car){
         if(ModelState.IsValid){
             //do bazy danych wstawienie
+            _repo.InsertCar(car);
+            return RedirectToAction("List");
         }
         return View();
     }

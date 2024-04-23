@@ -30,4 +30,16 @@ public class CarsRepo
         }
         return cars;
     }
+
+    internal void InsertCar(Car car)
+    {
+       using(SqliteConnection conn = new SqliteConnection(_connString)){
+        SqliteCommand command = conn.CreateCommand();
+        command.CommandText=
+        $"INSERT INTO MyCars(model,year,price) VALUES('{car.Model}',{car.Year},{car.Price})";
+        conn.Open();
+        command.ExecuteNonQuery();
+        conn.Close();
+       }
+    }
 }
