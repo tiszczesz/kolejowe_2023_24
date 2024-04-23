@@ -13,4 +13,15 @@ public class CarController:Controller
         var cars = _repo.GetCars();
         return View(cars);  
     }
+    [HttpGet]
+    public IActionResult Insert(){
+        return View();
+    }
+     [HttpPost]
+    public IActionResult Insert(Car car){
+        if(ModelState.IsValid){
+            //do bazy danych wstawienie
+        }
+        return View();
+    }
 }
