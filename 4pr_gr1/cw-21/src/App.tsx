@@ -30,7 +30,7 @@ function App() {
             style={{ border: "solid 1px grey", padding: "10px" }}
           />
         </div>
-        <button onClick={()=>{setShow(f=>!f);console.log(show)}} >Dodaj zadanie</button>
+        <button className="w-50 btn btn-info m-3" onClick={()=>{setShow(f=>!f);console.log(show)}} >Dodaj zadanie</button>
         {show && <TodoForm />}
       </TodosContext.Provider>
     </div>
