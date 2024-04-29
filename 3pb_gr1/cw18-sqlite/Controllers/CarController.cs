@@ -26,4 +26,24 @@ public class CarController:Controller
         }
         return View();
     }
+
+    public IActionResult Delete(int? id) {
+        //usuwanie rekordu
+        return RedirectToAction(nameof(List));
+    }
+
+    [HttpGet]
+    public IActionResult Update(int? id) {
+        Car? car = _repo.GetCarById(id);
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Update(Car car)
+    {
+        if (ModelState.IsValid) {
+            //zmiana danych
+            return RedirectToAction(nameof(List));
+        }
+        return View();
+    }
 }

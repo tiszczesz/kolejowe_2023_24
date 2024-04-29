@@ -1,0 +1,24 @@
+﻿@model Car
+
+<h2>Zmiana danych samochodu</h2>
+
+<form method="post">
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.Model"></label>
+        <input class="col-6" asp-for="@Model.Model" />
+        <span class="col-3" asp-validation-for="@Model.Model"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.Year"></label>
+        <input class="col-6" asp-for="@Model.Year" />
+        <span class="col-3" asp-validation-for="@Model.Year"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3" asp-for="@Model.Price"></label>
+        <input class="col-6" asp-for="@Model.Price" />
+        <span class="col-3" asp-validation-for="@Model.Price"></span>
+    </div>
+    <div class="row m-2">
+        <input class="offset-3 col-6 btn btn-primary" type="submit" value="Zapisz">
+    </div>
+</form>
