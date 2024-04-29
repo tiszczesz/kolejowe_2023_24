@@ -16,6 +16,10 @@ public class HomeController : Controller
 
     }
 
+    public ActionResult SortByAuthor(){
+        var books = _repo.GetBooks("author");
+        return View("Index", books);
+    }
     public IActionResult Index()
     {
         var books = _repo.GetBooks();

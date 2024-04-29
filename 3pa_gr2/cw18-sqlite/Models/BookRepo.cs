@@ -12,12 +12,13 @@ public class BookRepo
         _connection = configuration.GetConnectionString("sqlite")
            ?? "Data Source=Books.db";
     }
-    public List<Book> GetBooks(){
+    public List<Book> GetBooks(string? fieldsName=null){
         List<Book> books = new List<Book>();
         using (SqliteConnection conn = new SqliteConnection(_connection))
         {
             SqliteCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM books";
+            string orderby = fieldsName==null ? "": " order by "+fieldsName;
+            command.CommandText = "SELECT * FROM books "+orderby;
             conn.Open();
             SqliteDataReader rd = command.ExecuteReader();
             while (rd.Read()){
