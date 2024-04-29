@@ -17,7 +17,9 @@ const TodoForm = (props: Props) => {
         formState: { errors },
       } = useForm<Inputs>()
       const onSubmit: SubmitHandler<Inputs> = (data) =>{
-        data.todoInsert.id = uuidv4()
+        data.todoInsert.id = uuidv4(); 
+        const date = new Date(data.todoInsert.date);
+        data.todoInsert.date = date;
         context?.handleInsert({...data.todoInsert })
       }
     
@@ -26,8 +28,8 @@ const TodoForm = (props: Props) => {
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
         <form onSubmit={handleSubmit(onSubmit)}>
         {/* register your input into the hook by invoking the "register" function */}
-        <input defaultValue="" {...register("todoInsert.title")} placeholder='podaj nazwę' /><br />
-        <input defaultValue="" {...register("todoInsert.content")} placeholder='podaj treść' /><br />
+        <input defaultValue="" {...register("todoInsert.title", { required: true })} placeholder='podaj nazwę' /><br />
+        <input defaultValue="" {...register("todoInsert.content", { required: true })} placeholder='podaj treść' /><br />
   
         {/* include validation with required or other standard HTML validation rules */}
         <input type='date' {...register("todoInsert.date", { required: true })} />

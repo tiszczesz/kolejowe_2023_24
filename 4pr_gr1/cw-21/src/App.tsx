@@ -17,7 +17,7 @@ function App() {
   }
   const handleInsert = (t:Todo)=>{
     console.log(t);
-    
+    setTodos(prev=>[...prev,t])
   }
   return (
     <div className="container">
