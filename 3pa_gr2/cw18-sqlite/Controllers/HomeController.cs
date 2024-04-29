@@ -21,7 +21,21 @@ public class HomeController : Controller
         var books = _repo.GetBooks();
         return View(books);
     }
-
+    [HttpGet]
+    public IActionResult Insert(){
+        //aby wyswietlic formularz
+        return View();
+    }
+    [HttpPost]
+     public IActionResult Insert(Book book){
+        //aby wystawic ksiazke z formularza do SQLite
+        if(ModelState.IsValid){
+            //zapisanie do bazy i przekierowanie do tabelki
+            return RedirectToAction(nameof(Index));
+        }
+        //powrot do formularza z informacjami o bledach
+        return View(book);
+    }
     public IActionResult Privacy()
     {
         return View();
