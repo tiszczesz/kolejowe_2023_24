@@ -31,10 +31,16 @@ public class HomeController : Controller
         //aby wystawic ksiazke z formularza do SQLite
         if(ModelState.IsValid){
             //zapisanie do bazy i przekierowanie do tabelki
+            _repo.InsertBook(book);
             return RedirectToAction(nameof(Index));
         }
         //powrot do formularza z informacjami o bledach
         return View(book);
+    }
+    [HttpGet]
+    public IActionResult SortByTitle(){
+        var books = _repo.GetBooks().OrderBy(b=>b.Title).ToList();
+        return View("Index",books);
     }
     public IActionResult Privacy()
     {

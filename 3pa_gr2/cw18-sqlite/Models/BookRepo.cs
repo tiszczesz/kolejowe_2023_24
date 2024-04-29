@@ -1,4 +1,5 @@
-﻿using cw18_sqlite.Models;
+﻿using System.Globalization;
+using cw18_sqlite.Models;
 using Microsoft.Data.Sqlite;
 
 namespace cw18_sqlite;
@@ -31,5 +32,17 @@ public class BookRepo
         }
 
         return books;
+    }
+
+    internal void InsertBook(Book book)
+    {
+        using(SqliteConnection conn = new SqliteConnection(_connection)){
+            SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "INSERT INTO books(title,author,price) "+
+              $" VALUES('{book?.Title?.Trim()}','{book?.Author?.Trim()}',{book?.Price?.ToString(CultureInfo.InvariantCulture)})";
+              conn.Open();
+              command.ExecuteNonQuery();
+              conn.Close();
+        }
     }
 }
