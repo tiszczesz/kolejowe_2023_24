@@ -51,10 +51,11 @@ public class FilmController : Controller
         return RedirectToAction(nameof(List));
     }
     [HttpPost]
-    public IActionResult Update(MyFilm film)
+    public IActionResult Update(MyFilm? film)
     {
         if(ModelState.IsValid){
             //update filmu
+            _repo.UpdateFilm(film);
             return RedirectToAction(nameof(List));
         }
         return View(film);

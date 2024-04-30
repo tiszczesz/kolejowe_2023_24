@@ -38,7 +38,7 @@ public class FilmsRepo
          using (SqliteConnection conn = new SqliteConnection(_connString))
         {
             SqliteCommand command = conn.CreateCommand();
-            command.CommandText = $"DELETE FROM Films WHERE id={id}";
+            command.CommandText = $"DELETE FROM Films WHERE Id={id}";
             conn.Open();
             command.ExecuteNonQuery();
             conn.Close();
@@ -69,7 +69,7 @@ public class FilmsRepo
         using (SqliteConnection conn = new SqliteConnection(_connString))
         {
             SqliteCommand command = conn.CreateCommand();
-            command.CommandText = $"SELECT * FROM Films WHERE id={id}";
+            command.CommandText = $"SELECT * FROM Films WHERE Id={id}";
             conn.Open();
             SqliteDataReader rd =  command.ExecuteReader();
             rd.Read();
@@ -82,6 +82,27 @@ public class FilmsRepo
                     Price = rd.GetDecimal(5)
                 };
             return result;
+        }
+    }
+
+    public void UpdateFilm(MyFilm? film)
+    {
+        if(film==null) return;
+         using (SqliteConnection conn = new SqliteConnection(_connString))
+        {
+            SqliteCommand command = conn.CreateCommand();
+            command.CommandText = $"UPDATE Films SET Title=@Title,Director=@Director,Language=@Language,Date=@Date,Price=@Price "+
+            $" WHERE Id=@Id";
+            command.Parameters.AddWithValue("@Title", film.Title);
+            command.Parameters.AddWithValue("@Director", film.Director);
+            command.Parameters.AddWithValue("@Language", film.Language);
+            command.Parameters.AddWithValue("@Date", film.Date);
+            command.Parameters.AddWithValue("@Price", film.Price);
+            command.Parameters.AddWithValue("@Id", film.Id);
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+            
         }
     }
 }
