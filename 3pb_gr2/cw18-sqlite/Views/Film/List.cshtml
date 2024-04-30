@@ -1,5 +1,8 @@
 @model List<MyFilm>
 <h3>Zbiór filmów</h3>
+<div>
+    <a class="btn btn-dark w-25" asp-action="Insert">dodaj nowy film</a>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -19,7 +22,10 @@
                 <td>@f.Language</td>
                 <td>@f.Date</td>
                 <td class="text-end">@f.Price</td>
-                <td></td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@f.Id">Usuń film</a>
+                    <a class="btn btn-danger" asp-action="Update" asp-route-id="@f.Id">Zmień film</a>
+                </td>
             </tr>
         }
     </tbody>

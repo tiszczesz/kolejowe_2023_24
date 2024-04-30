@@ -1,0 +1,34 @@
+@model MyFilm
+
+<h2>Dodaj nowy film</h2>
+<form method="post">
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="@Model.Title"></label>
+        <input type="text" class="col-6" asp-for="@Model.Title" />
+        <span class="col-3 text-danger" asp-validation-for="@Model.Title"></span>
+    </div>
+    <div class="row m-2">
+        <label class="col-3 text-end" asp-for="@Model.Director"></label>
+        <input type="text" class="col-6" asp-for="@Model.Director" />
+        <span class="col-3 text-danger" asp-validation-for="@Model.Director"></span>
+    </div>
+      <div class="row m-2">
+        <label class="col-3 text-end" asp-for="@Model.Language"></label>
+        <input type="text" class="col-6" asp-for="@Model.Language" />
+        <span class="col-3 text-danger" asp-validation-for="@Model.Language"></span>
+    </div>
+      <div class="row m-2">
+        <label class="col-3 text-end" asp-for="@Model.Date"></label>
+        <input type="date" class="col-6" asp-for="@Model.Date" />
+        <span class="col-3 text-danger" asp-validation-for="@Model.Date"></span>
+    </div>
+     <div class="row m-2">
+        <label class="col-3 text-end" asp-for="@Model.Price"></label>
+        <input type="number" step="0.01" class="col-6" asp-for="@Model.Price" />
+        <span class="col-3 text-danger" asp-validation-for="@Model.Price"></span>
+    </div>
+    <div class="row m-2">
+        <input class="btn-btn-primary offset-3 col-3 ml-2" type="submit" value="Zapisz">
+        <input class="btn-btn-primary col-3" type="reset" value="Wyczyść">
+    </div>
+</form>
