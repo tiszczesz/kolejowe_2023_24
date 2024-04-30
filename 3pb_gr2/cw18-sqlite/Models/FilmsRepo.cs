@@ -91,8 +91,9 @@ public class FilmsRepo
          using (SqliteConnection conn = new SqliteConnection(_connString))
         {
             SqliteCommand command = conn.CreateCommand();
-            command.CommandText = $"UPDATE Films SET Title=@Title,Director=@Director,Language=@Language,Date=@Date,Price=@Price "+
-            $" WHERE Id=@Id";
+            command.CommandText = 
+                $"UPDATE Films SET Title=@Title,Director=@Director,Language=@Language,Date=@Date,Price=@Price "+
+                $" WHERE Id=@Id";
             command.Parameters.AddWithValue("@Title", film.Title);
             command.Parameters.AddWithValue("@Director", film.Director);
             command.Parameters.AddWithValue("@Language", film.Language);
