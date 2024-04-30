@@ -8,7 +8,7 @@
     <thead>
         <tr>
             <th>Lp</th>
-            <th>Model</th>
+            <th><a asp-action="SortByModel">Model</a></th>
             <th>Rok produkcji</th>
             <th >Cena</th>
             <th></th>
@@ -20,7 +20,7 @@
             lp++;
             <tr>
                 <td>@lp</td>
-                <td>@c.Model</td>
+                <td>@c.Model </td>
                 <td>@c.Year</td>
                 <td class="text-end">@c.Price</td>
                 <td>

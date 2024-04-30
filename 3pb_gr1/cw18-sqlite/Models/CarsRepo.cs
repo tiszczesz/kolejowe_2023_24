@@ -9,12 +9,13 @@ public class CarsRepo
         _connString = configuration.GetConnectionString("sqlite")
            ?? "Data Source=Cars.db";
     }
-    public List<Car> GetCars(){
+    public List<Car> GetCars(string? fieldName=null){
         List<Car> cars = new();
         using (SqliteConnection connection = new SqliteConnection(_connString))
         {
             SqliteCommand command = connection.CreateCommand();
-            command.CommandText = "SELECT * FROM MyCars";
+            string orderby = fieldName!=null? " order by "+fieldName: "";
+            command.CommandText = "SELECT * FROM MyCars "+orderby;
             connection.Open();
             SqliteDataReader rd = command.ExecuteReader();
             while (rd.Read()){
@@ -64,5 +65,28 @@ public class CarsRepo
 
         return car;
 
+    }
+
+    public void DeleteCar(int? id)
+    {
+        if(id==null) return;
+        using (SqliteConnection connection = new SqliteConnection(_connString)){
+            SqliteCommand command = connection.CreateCommand();
+            command.CommandText = $"DELETE FROM MyCars WHERE id={id}";
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
+    }
+
+    public void UpdateCar(Car car){
+         using (SqliteConnection connection = new SqliteConnection(_connString)){
+            SqliteCommand command = connection.CreateCommand();
+            command.CommandText = $"UPDATE MyCars SET model='{car.Model}',year={car.Year},price={car.Price}  WHERE id={car.Id}";
+            Console.WriteLine(command.CommandText);
+           connection.Open();
+           command.ExecuteNonQuery();
+           connection.Close();
+        }
     }
 }
