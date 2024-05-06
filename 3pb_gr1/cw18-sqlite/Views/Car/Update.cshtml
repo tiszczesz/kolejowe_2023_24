@@ -3,6 +3,7 @@
 <h2>Zmiana danych samochodu</h2>
 
 <form method="post">
+    <input type="hidden" asp-for="@Model.Id">
     <div class="row m-2">
         <label class="col-3" asp-for="@Model.Model"></label>
         <input class="col-6" asp-for="@Model.Model" />

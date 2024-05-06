@@ -3,11 +3,14 @@
     ViewData["Title"] = "Home Page";
 }
 <h2>Lista książek</h2>
+<div>
+    <a asp-action="Insert" class="btn btn-primary p-3">dodaj nową książkę</a>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Tytuł</th>
-            <th>Autor</th>
+            <th><a asp-action="SortByTitle">Tytuł</a> </th>
+            <th><a asp-action="SortByAuthor">Autor</a></th>
             <th>Cena</th>
         </tr>
     </thead>

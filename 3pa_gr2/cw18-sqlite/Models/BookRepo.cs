@@ -1,4 +1,5 @@
-﻿using cw18_sqlite.Models;
+﻿using System.Globalization;
+using cw18_sqlite.Models;
 using Microsoft.Data.Sqlite;
 
 namespace cw18_sqlite;
@@ -11,12 +12,13 @@ public class BookRepo
         _connection = configuration.GetConnectionString("sqlite")
            ?? "Data Source=Books.db";
     }
-    public List<Book> GetBooks(){
+    public List<Book> GetBooks(string? fieldsName=null){
         List<Book> books = new List<Book>();
         using (SqliteConnection conn = new SqliteConnection(_connection))
         {
             SqliteCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM books";
+            string orderby = fieldsName==null ? "": " order by "+fieldsName;
+            command.CommandText = "SELECT * FROM books "+orderby;
             conn.Open();
             SqliteDataReader rd = command.ExecuteReader();
             while (rd.Read()){
@@ -31,5 +33,17 @@ public class BookRepo
         }
 
         return books;
+    }
+
+    internal void InsertBook(Book book)
+    {
+        using(SqliteConnection conn = new SqliteConnection(_connection)){
+            SqliteCommand command = conn.CreateCommand();
+            command.CommandText = "INSERT INTO books(title,author,price) "+
+              $" VALUES('{book?.Title?.Trim()}','{book?.Author?.Trim()}',{book?.Price?.ToString(CultureInfo.InvariantCulture)})";
+              conn.Open();
+              command.ExecuteNonQuery();
+              conn.Close();
+        }
     }
 }

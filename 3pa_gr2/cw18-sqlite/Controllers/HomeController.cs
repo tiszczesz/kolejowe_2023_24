@@ -16,12 +16,36 @@ public class HomeController : Controller
 
     }
 
+    public ActionResult SortByAuthor(){
+        var books = _repo.GetBooks("author");
+        return View("Index", books);
+    }
     public IActionResult Index()
     {
         var books = _repo.GetBooks();
         return View(books);
     }
-
+    [HttpGet]
+    public IActionResult Insert(){
+        //aby wyswietlic formularz
+        return View();
+    }
+    [HttpPost]
+     public IActionResult Insert(Book book){
+        //aby wystawic ksiazke z formularza do SQLite
+        if(ModelState.IsValid){
+            //zapisanie do bazy i przekierowanie do tabelki
+            _repo.InsertBook(book);
+            return RedirectToAction(nameof(Index));
+        }
+        //powrot do formularza z informacjami o bledach
+        return View(book);
+    }
+    [HttpGet]
+    public IActionResult SortByTitle(){
+        var books = _repo.GetBooks().OrderBy(b=>b.Title).ToList();
+        return View("Index",books);
+    }
     public IActionResult Privacy()
     {
         return View();

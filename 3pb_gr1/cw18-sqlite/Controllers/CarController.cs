@@ -14,6 +14,12 @@ public class CarController:Controller
         return View(cars);  
     }
     [HttpGet]
+    public ActionResult SortByModel(){
+        var cars = _repo.GetCars("model");
+        return View("List",cars);
+    }
+
+    [HttpGet]
     public IActionResult Insert(){
         return View();
     }
@@ -29,19 +35,21 @@ public class CarController:Controller
 
     public IActionResult Delete(int? id) {
         //usuwanie rekordu
+        _repo.DeleteCar(id);
         return RedirectToAction(nameof(List));
     }
 
     [HttpGet]
     public IActionResult Update(int? id) {
         Car? car = _repo.GetCarById(id);
-        return View();
+        return View(car);
     }
     [HttpPost]
     public IActionResult Update(Car car)
     {
         if (ModelState.IsValid) {
             //zmiana danych
+            _repo.UpdateCar(car);
             return RedirectToAction(nameof(List));
         }
         return View();
