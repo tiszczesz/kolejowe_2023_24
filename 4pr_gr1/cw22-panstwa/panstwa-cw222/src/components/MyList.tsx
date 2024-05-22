@@ -12,18 +12,14 @@ const MyList = (props: Props) => {
  
   function handelChange(e: React.ChangeEvent<HTMLInputElement>): void {
     console.log(e.target.value);
-    const result = props.countries.filter((elem)=>
-         elem.name.includes(e.target.value)
-    )
+    const result = e.target.value.length>0 ? props.countries.filter((elem)=>
+         elem.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+        ) : props.countries;
     console.log(
       result
     );
 
-    setCountries(
-      countries.filter((v) => {
-        return v.name.toLowerCase().includes(e.target.value.toLowerCase());
-      })
-    );
+    setCountries(result);
   }
 
   return (
