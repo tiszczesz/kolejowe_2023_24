@@ -26,6 +26,7 @@ function App() {
   const [user, setUser] = useState("");
   const [course, setCourse] = useState(0);
   const [result,setResult] = useState("");
+  const color = "green";
   return (
     <div className="container">
       <h2>Liczba kursów: {courses.length}</h2>
@@ -62,7 +63,7 @@ function App() {
           value="Zapisz do kursu"
         />
       </form>
-      <div>{result}</div>
+      <div style={{color:color}}>{result}</div>
     </div>
   );
 }
