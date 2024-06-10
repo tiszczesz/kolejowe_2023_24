@@ -1,1 +1,8 @@
 <p>persons-list works!</p>
+<button (click)="change()">Zmiana koloru</button>
+<div [style.color]="isRed?'red':'yellow'" [innerHTML]="info"></div>
+<ul>
+    @for (item of persons; track item.id) {
+        <li>{{item.firstname}}</li>
+}
+</ul>
