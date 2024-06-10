@@ -2,7 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { FormEvent, useRef, useState } from "react";
 import { MyList, Person } from "./lista";
-
+function getMaxId(list: Person[]): number | null {
+  if(list.length===0) return null;
+  return list.reduce((acc,p)=>Math.max(acc,p.id),-Infinity)
+}
 function App() {
   const [list, setList] = useState<Person[]>(MyList);
   const [show, setShow] = useState<boolean>(false);
@@ -17,16 +20,19 @@ function App() {
     e.preventDefault();
     if (formRef.current !== null) {
       const formData = new FormData(formRef.current);
-      const ids = list.map((e)=>e.id);
-      const maxId = Math.max(...ids)+1;
-      const newPerson:Person = {
-        id:maxId,
-        firstname:formData.get("firstname")?.toString(),
-        lastname:formData.get("lastname")?.toString(),
-        age:parseInt(formData.get("age")?.toString()!)
-      }
+      // const ids = list.map((e) => e.id);
+      // const maxId = Math.max(...ids) + 1;
+      const maxId = getMaxId(list)??-Infinity;
+      const newPerson: Person = {
+        id: maxId+1,
+        firstname: formData.get("firstname")?.toString(),
+        lastname: formData.get("lastname")?.toString(),
+        age: parseInt(formData.get("age")?.toString()!),
+      };
       console.log(formData);
-      setList((prev)=>[...prev,newPerson])
+      setList((prev) => [...prev, newPerson]);
+      console.log(list);
+      
     }
   }
 
@@ -42,21 +48,29 @@ function App() {
         </button>
         {show && (
           <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
-            <input required
+            <input
+              required
               name="firstname"
               className="m-1"
               type="text"
               placeholder="imię"
             />
             <br />
-            <input required
+            <input
+              required
               name="lastname"
               className="m-1"
               type="text"
               placeholder="nazwisko"
             />
             <br />
-            <input  required name="age" className="m-1" type="number" placeholder="wiek" />
+            <input
+              required
+              name="age"
+              className="m-1"
+              type="number"
+              placeholder="wiek"
+            />
             <br />
             <button className="btn btn-primary m-1" type="submit">
               Dodaj
