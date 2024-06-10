@@ -1,11 +1,81 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import { FormEvent, useRef, useState } from "react";
+import { MyList, Person } from "./lista";
 
 function App() {
+  const [list, setList] = useState<Person[]>(MyList);
+  const [show, setShow] = useState<boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  function handleDelete(id: number): void {
+    console.log("usuwanie: " + id);
+    //setList([...stare,nowy])   dodawanie
+    setList(list.filter((elem) => elem.id !== id)); //usuwanie
+  }
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>): void {
+    e.preventDefault();
+    if(formRef.current!==null){
+        const formData = new FormData(formRef.current);
+    console.log(formData);
+    }
+  
+    
+  }
+
   return (
     <div className="container">
-      <h1>Moja aplikacja</h1>
-      
+      <h1>Lista osób: {list.length}</h1>
+      <div>
+        <button
+          className="btn btn-outline-warning"
+          onClick={() => setShow(!show)}
+        >
+          {show ? "Ukryj" : "Pokaż"}
+        </button>
+        {show && (
+          <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+            <input name="firstname" className="m-1" type="text" placeholder="imię" />
+            <br />
+            <input name="lastname" className="m-1" type="text" placeholder="nazwisko" />
+            <br />
+            <input name="age" className="m-1" type="text" placeholder="wiek" />
+            <br />
+            <button className="btn btn-primary m-1" type="submit">
+              Dodaj
+            </button>
+          </form>
+        )}
+      </div>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Lp</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Wiek</th>
+            <th>----</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map((p, i) => (
+            <tr key={p.id}>
+              <td>{i + 1}</td>
+              <td>{p.firstname}</td>
+              <td>{p.lastname}</td>
+              <td style={{ textAlign: "right" }}>{p.age}</td>
+              <td>
+                <button
+                  onClick={() => handleDelete(p.id)}
+                  className="btn btn-danger"
+                >
+                  x
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
