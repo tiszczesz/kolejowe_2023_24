@@ -1,8 +1,8 @@
 export type Person = {
     id:number;
-    firstname:string;
-    lastname:string;
-    age:number;
+    firstname?:string;
+    lastname?:string;
+    age?:number;
 }
 export const MyList = [
     {id:1,firstname:"John",lastname:"McKinley",age:20},

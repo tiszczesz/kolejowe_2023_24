@@ -15,12 +15,19 @@ function App() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    if(formRef.current!==null){
-        const formData = new FormData(formRef.current);
-    console.log(formData);
+    if (formRef.current !== null) {
+      const formData = new FormData(formRef.current);
+      const ids = list.map((e)=>e.id);
+      const maxId = Math.max(...ids)+1;
+      const newPerson:Person = {
+        id:maxId,
+        firstname:formData.get("firstname")?.toString(),
+        lastname:formData.get("lastname")?.toString(),
+        age:parseInt(formData.get("age")?.toString()!)
+      }
+      console.log(formData);
+      setList((prev)=>[...prev,newPerson])
     }
-  
-    
   }
 
   return (
@@ -35,11 +42,21 @@ function App() {
         </button>
         {show && (
           <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
-            <input name="firstname" className="m-1" type="text" placeholder="imię" />
+            <input required
+              name="firstname"
+              className="m-1"
+              type="text"
+              placeholder="imię"
+            />
             <br />
-            <input name="lastname" className="m-1" type="text" placeholder="nazwisko" />
+            <input required
+              name="lastname"
+              className="m-1"
+              type="text"
+              placeholder="nazwisko"
+            />
             <br />
-            <input name="age" className="m-1" type="text" placeholder="wiek" />
+            <input  required name="age" className="m-1" type="number" placeholder="wiek" />
             <br />
             <button className="btn btn-primary m-1" type="submit">
               Dodaj
